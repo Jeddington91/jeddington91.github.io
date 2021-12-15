@@ -1,0 +1,287 @@
+/** Main Stylesheet for Eddington Eyecare **/
+
+
+.countHolder {
+  text-align:center;
+
+}
+
+div.counter{
+  margin: 0 auto;
+  /** controls visibility of counter*/
+}
+
+
+/** Wrapper and general **/
+
+body{
+  background-image: url("beige-tiles.png");
+  background-repeat: repeat;
+}
+
+.wrapper{
+  width: 100%;
+  font-family:arial, sans-serif, serif;
+  background-color: #00007f;
+  box-shadow: 0px 0px 15px 4px;
+}
+
+h2{
+  color: #ffffff;
+  background-color:#00007f;
+  padding-bottom: 10px;
+  margin-top: 6px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: -3px 3px 6px #252525;
+  border-style: none none solid;
+  border-color: #AFEEEE;
+}
+/*252525 - black, AFEEEE Turquoise, ffffff-white, */
+
+p{
+color: #ffffff;
+font-size: 1.2em;
+}
+
+.primary-content{
+  padding: 1%;
+  text-align: left;
+  margin-bottom:1%;
+}
+
+footer{
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: .8em;
+  width: 100%;
+  margin-bottom: 0px;
+  padding-top: 10px;
+  border-style: solid none none;
+  border-color: #AFEEEE;
+}
+
+/** Main header Styles **/
+
+.headEE{
+  background-color: #EEE;
+  width: 100%;
+  vertical-align: middle;
+  text-align: left;
+  background-image: url("BG3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 200px;
+  padding-top: 150px;
+  padding-left: 2px;
+  margin-top: 0px;
+}
+
+.headEE img{
+position:absolute;
+margin-left: 10%;
+border-radius:15px;
+border-color: #ffffff;
+box-shadow: -4px 4px 2px 3px #252525;
+width:20%;
+
+}
+
+#leftLogo{
+  margin-top: -5%;
+  border: solid;
+  padding: 2%;
+  background-color: #ffffff;
+  border-color: #ffffff;
+
+}
+
+#rightLogo{
+  width:15%;
+  padding:2%;
+}
+
+div.OutsidePic {
+	background-color: #00007f;
+  margin-top: 15px;
+}
+
+#OutsidePic {
+	width:90%;
+	float: right;
+	margin: 15px;
+	border-radius:15px;
+  box-shadow: 0px 0px 10px 5px #AFEEEE;
+}
+
+#InsidePic{
+  margin: 15px;
+  float: right;
+  border-radius:5px;
+  box-shadow: 0px 0px 10px 2px #AFEEEE;
+
+}
+
+/******************General**********************/
+
+
+/** Iframe Gmaps Styles */
+iframe{
+	display: block;
+	margin: auto;
+}
+
+div #GMap{
+	display: block;
+	margin: auto;
+}
+
+
+a:link.inText , a:visited.inText {
+	text-decoration:none;
+	font-weight: none;
+	padding: 2px;
+	color: #ffffff;
+	background-color:#252525;
+	border: none;
+}
+
+a:hover.inText, a:active.inText {
+	text-decoration:none;
+	font-weight: none;
+	padding: 2px;
+	border: none;
+	color: #252525;
+	background-color:#ffffff;
+}
+
+/**The Practice Styling**/
+#InsidePic2{
+  display:block;
+  width: 22%;
+  margin: 15px;
+  border-radius:5px;
+  box-shadow: 0px 0px 10px 2px #AFEEEE;
+}
+
+#insidePic2 div{
+  width: 100%;
+  text-align: center;
+}
+
+/**Exam styling*/
+
+#phoropter{
+  margin-top:10px;
+}
+
+/**Frame Page Styles*/
+
+#frames{
+  margin-top: 5px;
+  border-radius:5px;
+  box-shadow: 0px 0px 10px 2px #AFEEEE;
+}
+
+
+/**Contact Lenses*/
+#CLs{
+  width:80%;
+  margin-top:10px;
+  border-radius:5px;
+  box-shadow: 0px 0px 10px 2px #AFEEEE;
+}
+
+/**Insurances*/
+
+div.InsuranceHolders{
+	background-color: #00007f;
+	width: 20%;
+	vertical-align: middle;
+	display: inline-block;
+	padding:2%;
+
+}
+
+
+/** The Doctor Styling*/
+
+#doctor{
+  margin-top:20px;
+  border-radius:5px;
+  box-shadow: 0px 0px 10px 2px #AFEEEE;
+}
+
+ .left-head-logo{
+   float:left;
+   width:40%;
+}
+
+/** Navigation Styles **/
+
+a:link, a:visited {
+	text-decoration:none;
+	font-weight: none;
+	color: #000019;
+	background-color:#EEE;
+	font-size: 1em;
+}
+
+a:hover {
+  font-weight:bold;
+}
+
+.navigation{
+  list-style-type: none;
+  display:inline;
+  padding-top: 20px;
+  background-color: #EEE;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: Trebuchet MS, arial, serif;
+}
+
+.navigation-bar{
+  margin-top: 5px;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000019;
+  margin-bottom:2px;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #00007f;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  margin-bottom:2px;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  margin-bottom:2px;
+}
+
+/**Our Hours styling*/
+.hours ul{
+  list-style-type: none;
+}
+
+.hours li{
+  margin: 6px;
+  padding-top: 6px;
+  color: #ffffff;
+}
