@@ -1,0 +1,131 @@
+/*Styles for Eddington, James Portfolio*/
+
+.pagehead{
+  text-align: right;
+}
+
+h1{  padding-top: 20px;}
+
+h1, p{
+  color: #000;
+  padding-left: 10px;
+  font-family: sans-serif;
+}
+
+h3{
+  font-weight:normal;
+  color: #000;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+a{
+  text-align:left;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #222;
+}
+
+.pagehead a{
+  text-align:right;
+}
+
+ul{
+  list-style-type: square;
+}
+
+#portraitPhoto{
+  border-radius:50%;
+  margin-top:10px;
+}
+
+#scrubberDevice{
+  padding-top: 70px;
+}
+
+body{
+  background-image: url("dark-honeycomb.png");
+  background-repeat: repeat;
+}
+
+#navBar{
+margin: 0 auto;
+}
+
+.navItem{
+  background-color:#FFF;
+  color: #222;
+  padding-top:15px;
+  padding-bottom:15px;
+  text-decoration: none;
+}
+
+.landing p{
+  font-size: 1.8em;
+  line-height: 1.2em;
+  padding-bottom: 20px;
+  font-family: Georgia;
+}
+
+.capstone p{
+  font-size: 1.2em;
+  line-height: 1em;
+  padding-bottom: 20px;
+  font-family: Georgia;
+}
+
+.works p{
+  font-size: 1em;
+  padding-bottom: 20px;
+  font-family: Georgia;
+  padding-left: 0px;
+}
+
+.code-box{
+  background-color: #888;
+  border: 1px solid #555;
+  padding: 10px;
+  width: 100%;
+  font-family:monospace;
+  color:white;
+}
+
+.caption{
+
+  padding:5px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/*Animations*/
+
+/*Hover for Navigation*/
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  margin-bottom:2px;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  margin-bottom:2px;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  margin-bottom:2px;
+}
