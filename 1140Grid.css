@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS Resets */
+
+
+html,body,div,span,object,iframe,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+{border:0;margin:0;padding:0}
+article,aside,figure,figure img,figcaption,hgroup,header,nav,section,video,object
+{display:block}
+a img
+{border:0}
+figure
+{position:relative}
+figure img
+{width:100%}
+
+.container {
+
+  width: 100%;
+  max-width: 1140px;
+  min-width: 755px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #F4EDDA;
+/*  background-color: #26004d; */
+}
+
+
+.row {
+width: 100%;
+max-width: 1140px;
+min-width: 755px;
+margin: 0 auto;
+overflow: hidden;
+}
+
+
+ .onecol , .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol,
+ .elevencol, .twelvecol, .thirteencol, .fourteencol , .fifteencol, .sixteencol, .seventeencol, .eighteencol,
+ .nineteencol, .twentycol, .twentyonecol, .twentytwocol, .twentythreecol, .twentyfourcol
+{
+/*margin-right: 1.1%;*/
+margin-bottom: 10px;
+float: left;
+min-height: 1px;
+}
+
+
+
+
+.row .onecol { width: 4.167%;}
+.row .twocol { width: 8.334%; }
+.row .threecol { width: 12.5%; }
+.row .fourcol { width: 16.667%; }
+.row .fivecol { width: 20.834%; }
+.row .sixcol { width: 25%; }
+.row .sevencol{ width: 29.167%; }
+.row .eightcol { width: 33.334%; }
+.row .ninecol{ width: 37.5%; }
+.row .tencol { width: 41.667%; }
+.row .elevencol { width: 45.834%; }
+.row .twelvecol { width: 50%; }
+.row .thirteencol { width: 54.167%; }
+.row .fourteencol {width: 58.334%;}
+.row .fifteencol{ width: 62.5%; }
+.row .sixteencol {width: 66.667%;}
+.row .seventeencol { width: 70.834%; }
+.row .eighteencol {width: 75%;}
+.row .nineteencol { width: 79.167%; }
+.row .twentycol {width: 83.334%;}
+.row .twentyonecol { width: 87.5%; }
+.row .twentytwocol {width: 91.667%;}
+.row .twentythreecol { width: 95.834%; }
+.row .twentyfourcol {width: 100%; float: left;}
+
+.last {
+margin-right: 0px;
+}
+
+
+img, object, embed {
+max-width: 100%;
+}
+
+
+img {
+	height: auto;
+}
+
+
+/*Fix for Webkit*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+.onecol , .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol,
+.twelvecol, .thirteencol, .fourteencol , .fifteencol, .sixteencol, .seventeencol, .eighteencol, .nineteencol, .twentycol,
+.twentyonecol, .twentytwocol, .twentythreecol, .twentyfourcol
+{
+float: left;
+min-height: 1px;
+margin-bottom: 10px;
+}
+
+.row .onecol { width: 4.167%; }
+.row .twocol { width: 8.334%; }
+.row .threecol { width: 12.5%; }
+.row .fourcol { width: 16.667%; }
+.row .fivecol { width: 20.834%;}
+.row .sixcol { width: 25%; }
+.row .sevencol{ width: 29.167%; }
+.row .eightcol { width: 33.334%; }
+.row .ninecol{ width: 37.5%; }
+.row .tencol { width: 41.667%; }
+.row .elevencol { width: 45.834%; }
+.row .twelvecol { width: 50%; }
+.row .thirteencol { width: 54.167%; }
+.row .fourteencol {width: 58.334%;}
+.row .fifteencol{ width: 62.5%; }
+.row .sixteencol {width: 66.667%;}
+.row .seventeencol { width: 70.834%; }
+.row .eighteencol {width: 75%;}
+.row .nineteencol { width: 79.167%; }
+.row .twentycol {width: 83.334%;}
+.row .twentyonecol { width: 87.5%; }
+.row .twentytwocol {width: 91.667%;}
+.row .twentythreecol { width: 95.834%; }
+.row .twentyfourcol {width: 100%; float: left;}
+} /*END MEDIA QUERY*/
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Smaller screens */
+
+
+
+@media only screen and (max-width: 1023px)
+{
+
+
+body {
+	font-size: 0.8em;
+	line-height: 1.5em;
+	}
+
+
+}
+
+
+
+
+/* Mobile */
+
+
+
+@media handheld, only screen and (max-width: 767px)
+{
+
+
+body {
+	font-size: 0.8em;
+	-webkit-text-size-adjust: none;
+	}
+
+.row, body, .container {
+width: 100%;
+min-width: 0;
+margin-left: 0px;
+margin-right: 0px;
+}
+
+.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol
+.row .thirteencol, .row .fourteencol, .row .fifteencol, .row .sixteencol, .row .seventeencol, .row .eighteencol, .row .nineteencol, .row .twentycol, .row .twentyonecol, .row .twentytwocol, .row .twentythreecol, .row .twentyfourcol
+{
+width: auto;
+float: none;
+margin-left: 0px;
+margin-right: 0px;
+	}
+
+.last {
+ margin-right: 0px;
+}
+
+} /*END MEDIA QUERY*/
+
+* {
+  box-sizing: border-box;
+}
