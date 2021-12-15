@@ -1,0 +1,140 @@
+// Variable Declaration
+int dir1=3;   //Assign A3 pin to dir1 variable
+int dir2=4;   //Assign A4 pin to dir2 variable
+int dir3=10;  //Assign A10 pin to dir3 variable
+int dir4=9;   //Assign A9 pin to dir4 variable
+
+int Pressure1Pin=2; //Front,Right
+int Pressure2Pin=1; //Rear,left
+int Pressure3Pin=0; //Side
+
+int force1;
+int force2;
+int force3;
+
+int fwdToRev(){
+  digitalWrite(dir1,HIGH);  //Left turn
+  digitalWrite(dir2,LOW);
+  digitalWrite(dir3,LOW);
+  digitalWrite(dir4,HIGH);
+  delay(1000);
+  digitalWrite(dir1,HIGH);  //Reverse Drive
+  digitalWrite(dir2,LOW);
+  digitalWrite(dir3,HIGH);
+  digitalWrite(dir4,LOW);
+  delay(1000);
+  digitalWrite(dir1,LOW);   //Right turn
+  digitalWrite(dir2,HIGH);
+  digitalWrite(dir3,HIGH);
+  digitalWrite(dir4,LOW);
+  delay(1000);
+  return;
+}
+int revToFwd(){
+  digitalWrite(dir1,LOW);   //Right turn
+  digitalWrite(dir2,HIGH);
+  digitalWrite(dir3,HIGH);
+  digitalWrite(dir4,LOW);
+  delay(1000);
+  digitalWrite(dir1,LOW);   //Forward Drive
+  digitalWrite(dir2,HIGH);
+  digitalWrite(dir3,LOW);
+  digitalWrite(dir4,HIGH);
+  delay(1000);
+  digitalWrite(dir1,HIGH);  //Left turn
+  digitalWrite(dir2,LOW);
+  digitalWrite(dir3,LOW);
+  digitalWrite(dir4,HIGH);
+  delay(1000);
+  return;
+}
+
+int CleanRev(){             //Occurs with Front/right sensor
+  digitalWrite(dir1,HIGH);  //Reverse Drive
+  digitalWrite(dir2,LOW);
+  digitalWrite(dir3,HIGH);
+  digitalWrite(dir4,LOW);
+  
+  if(force2>100.0){
+    return;  
+  }
+}
+
+int CleanFwd(){             //Occurs with Rear/Left sensor
+  digitalWrite(dir1,LOW);   //Forward Drive
+  digitalWrite(dir2,HIGH);
+  digitalWrite(dir3,LOW);
+  digitalWrite(dir4,HIGH);
+  
+  if(force1>100.0){
+    return;  
+  }
+}
+
+void setup() {
+//Initialize input/output pins -- Arduino required
+pinMode(dir1,OUTPUT);
+pinMode(dir2,OUTPUT);
+pinMode(dir3,OUTPUT);
+pinMode(dir4,OUTPUT);
+pinMode(Pressure1Pin,INPUT);
+pinMode(Pressure2Pin,INPUT);
+pinMode(Pressure3Pin,INPUT);
+Serial.begin(9600);
+}
+void loop(){                //MAIN
+force1=analogRead(Pressure1Pin);
+force2=analogRead(Pressure2Pin);
+force3=analogRead(Pressure3Pin);
+Serial.println(force1);
+Serial.println(force2);
+Serial.println(force3);
+delay(500);
+
+while(force3<100.0){
+  if(force1>100.0){
+    fwdToRev();
+    CleanRev();
+  }
+  else if (force2>100.0){
+    revToFwd();
+    CleanFwd();
+  }
+  else if (force3>100.0){
+    return;
+  }
+}
+
+
+if(force3>100.0 && force1>100.0 || force3>100.0 && force2>100.0) // Exit cleaning loop once bottom detected
+  {
+    return;
+  }
+
+
+
+if(force3>100.0 && force1>100.0){   //Front/right and Bottom/side sensor
+    fwdToRev();
+    CleanRev();
+  digitalWrite(dir1,LOW);           //Vehicle Stop
+  digitalWrite(dir2,LOW);
+  digitalWrite(dir3,LOW);
+  digitalWrite(dir4,LOW);
+  /*Optional Power Down Delay
+  delay(xx); */
+  return 0;
+  }
+if (force3>100.0 && force2>100.0){  //Rear/left and Bottom/side sensor
+    revToFwd();
+    CleanFwd();
+  digitalWrite(dir1,LOW);           //Vehicle Stop
+  digitalWrite(dir2,LOW);
+  digitalWrite(dir3,LOW);
+  digitalWrite(dir4,LOW);
+  /*Optional Power Down Delay
+  delay(xx); */
+  return 0;
+  } 
+  
+  
+}

@@ -1,0 +1,81 @@
+  BEGIN{
+    /* initialization */
+    SET vacuum motors ON
+    SET scrubbing motors ON
+
+    /* Outer loops for functionality*/
+    Outerloop{
+      IF sensor_1 && sensor_2 TRUE{
+        RETURN Clean_Forward, STOP
+      }
+      ELSE IF sensor_3 && sensor_2 TRUE{
+        RETURN Clean_Reverse, STOP
+      }
+      ELSE IF sensor_1 TRUE{
+        RETURN Clean_Forward
+      }
+      ELSE IF sensor_3 TRUE{
+        RETURN Clean_Reverse
+      }
+    }
+      /* Inner commands to be called */
+
+      /* Moves the vehicle forward*/
+        for clean_forward{
+          wheel_1 counterclockwise
+          wheel_2 clockwise
+          /* breakout to turn from forward to backwards*/
+          if(sensor_3 TRUE){
+            RETURN turn_reverse
+          }
+        }
+
+      /* Moves the vehicle backwards*/
+        for clean_reverse{
+          wheel_1 clockwise
+          wheel_2 counterclockwise
+          /* breakout to turn from backwards to forwards*/
+          if(sensor_1 TRUE){
+            RETURN turn_forward
+          }
+        }
+
+        /*Turn Handling*/
+        turn_reverse{
+          wheel_1 counterclockwise
+          wheel_2 counterclockwise /*Motors in opposing direction
+                                    to rotate vehicle -45 degrees*/
+          (timedelay)
+          wheel_1 clockwise
+          wheel_2 counterclockwise /*Moves into next direction 
+					of travel lane */
+          (timedelay)
+          /*reset orientation*/
+          wheel_1 clockwise
+          wheel_2 clockwise /*Motors in opposing direction
+                              to rotate vehicle +45 degrees*/
+          }
+          RETURN Outerloop
+        }
+
+        turn_forward{
+          wheel_1 clockwise
+          wheel_2 clockwise /*Motors in opposing direction
+                            to rotate vehicle +45 degrees*/
+          (timedelay)
+          wheel_1 counterclockwise
+          wheel_2 clockwise /*Moves into next direction of travel lane */
+          (timedelay)
+          /*reset orientation*/
+          wheel_1 counterclockwise
+          wheel_2 counterclockwise /*Motors in opposing direction
+                                    to rotate vehicle -45 degrees*/
+          }
+          RETURN Outerloop
+        }
+
+        /*Termination Handling*/
+        STOP{
+          SET scrubbing motors OFF
+          *SET vacuum motors OFF
+  }

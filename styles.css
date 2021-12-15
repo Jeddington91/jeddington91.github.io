@@ -43,6 +43,7 @@ ul{
   padding-top: 70px;
 }
 
+
 body{
   background-image: url("dark-honeycomb.png");
   background-repeat: repeat;
@@ -82,12 +83,10 @@ margin: 0 auto;
 }
 
 .code-box{
-  background-color: #888;
+  background-color: #EEE;
   border: 1px solid #555;
-  padding: 10px;
-  width: 100%;
+  width: 99%;
   font-family:monospace;
-  color:white;
 }
 
 .caption{
