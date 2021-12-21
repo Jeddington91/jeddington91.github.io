@@ -17,6 +17,7 @@ h3{
   color: #000;
   font-family: sans-serif;
   font-style: italic;
+  margin-bottom: 5px;
 }
 
 a{
@@ -57,7 +58,7 @@ margin: 0 auto;
   background-color:#FFF;
   color: #222;
   padding-top:15px;
-  padding-bottom:15px;
+  padding-bottom:10px;
   text-decoration: none;
 }
 
