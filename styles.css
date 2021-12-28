@@ -46,20 +46,8 @@ ul{
 
 
 body{
-  background-image: url("dark-honeycomb.png");
+  background-image: url("brushed_alu_dark.png");
   background-repeat: repeat;
-}
-
-#navBar{
-margin: 0 auto;
-}
-
-.navItem{
-  background-color:#FFF;
-  color: #222;
-  padding-top:15px;
-  padding-bottom:10px;
-  text-decoration: none;
 }
 
 .landing p{
@@ -103,14 +91,14 @@ margin: 0 auto;
 /*Animations*/
 
 /*Hover for Navigation*/
-.hover-underline-animation {
+.hoverUnderlineAnimation {
   display: inline-block;
   position: relative;
   color: #000;
   margin-bottom:2px;
 }
 
-.hover-underline-animation:after {
+.hoverUnderlineAnimation:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -124,7 +112,7 @@ margin: 0 auto;
   margin-bottom:2px;
 }
 
-.hover-underline-animation:hover:after {
+.hoverUnderlineAnimation:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
   margin-bottom:2px;
