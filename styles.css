@@ -27,7 +27,8 @@ a{
   color: #222;
 }
 
-.pagehead a{
+.pagehead{
+  padding-top:80px;
   text-align:right;
 }
 
@@ -89,6 +90,29 @@ body{
 
 
 /*Animations*/
+
+.fixedHome{
+  position: fixed;
+  top: 0;
+  background-color: #F4EDDA;
+  padding:10px;
+  padding-top: 20px;
+  border: solid #222 2px;
+  border-top: none;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  transition: 0.3s;
+  color: #000;
+
+  font-family: sans-serif;
+  font-weight:bold;
+  font-size: 2em;
+}
+
+.fixedHome:hover{
+  background-color: #222;
+  color: #FFF;
+}
 
 /*Hover for Navigation*/
 .hoverUnderlineAnimation {
