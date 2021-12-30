@@ -90,6 +90,16 @@ body{
 
 /*Animations*/
 
+/*Return to Home */
+
+#returnToHome{
+  position: sticky;
+  text-align: right;
+  margin-top:0px;
+  text-transform: uppercase;
+  top: 0;
+}
+
 /*Hover for Navigation*/
 .hoverUnderlineAnimation {
   display: inline-block;
