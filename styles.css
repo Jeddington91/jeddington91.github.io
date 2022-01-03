@@ -106,7 +106,8 @@ body{
 
   font-family: sans-serif;
   font-weight:bold;
-  font-size: 2em;
+  font-size: 1.7em;
+  text-align:center;
 }
 
 .fixedHome:hover{
