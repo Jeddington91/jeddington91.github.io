@@ -1,9 +1,5 @@
 /*Styles for Eddington, James Portfolio*/
 
-.pagehead{
-  text-align: right;
-}
-
 h1{  padding-top: 20px;}
 
 h1, p{
@@ -29,6 +25,11 @@ a{
 
 .pagehead{
   padding-top:80px;
+  text-align:right;
+}
+
+.pageheadHome{
+  padding-top:20px;
   text-align:right;
 }
 
