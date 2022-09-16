@@ -88,6 +88,30 @@ body{
   box-sizing: border-box;
 }
 
+.grid-example-row{
+  background-color: grey;
+}
+
+.grid-example-column{
+  border: 1px solid white;
+  background-color: grey;
+  margin:auto;
+  text-align:center;
+  padding-top:8px;
+  font-weight: bold;
+  color:white;
+  height: 40px;
+}
+
+#grid-example-column-text{
+  border: 1px solid white;
+  background-color: grey;
+  margin:auto;
+  padding-top:8px;
+  color:white;
+  padding: 10px;
+  font-family: sans-serif;
+}
 
 /*Animations*/
 
