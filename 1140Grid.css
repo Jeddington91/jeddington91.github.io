@@ -51,10 +51,10 @@ min-height: 1px;
 
 
 .row .onecol { width: 4.167%;}
-.row .twocol { width: 8.334%; }
+.row .twocol { width: 8.333%; }
 .row .threecol { width: 12.5%; }
 .row .fourcol { width: 16.667%; }
-.row .fivecol { width: 20.834%; }
+.row .fivecol { width: 20.833%; }
 .row .sixcol { width: 25%; }
 .row .sevencol{ width: 29.167%; }
 .row .eightcol { width: 33.334%; }
@@ -69,7 +69,7 @@ min-height: 1px;
 .row .seventeencol { width: 70.834%; }
 .row .eighteencol {width: 75%;}
 .row .nineteencol { width: 79.167%; }
-.row .twentycol {width: 83.334%;}
+.row .twentycol {width: 83.333%;}
 .row .twentyonecol { width: 87.5%; }
 .row .twentytwocol {width: 91.667%;}
 .row .twentythreecol { width: 95.834%; }
@@ -103,13 +103,13 @@ margin-bottom: 10px;
 }
 
 .row .onecol { width: 4.167%; }
-.row .twocol { width: 8.334%; }
+.row .twocol { width: 8.333%; }
 .row .threecol { width: 12.5%; }
 .row .fourcol { width: 16.667%; }
-.row .fivecol { width: 20.834%;}
+.row .fivecol { width: 20.833%;}
 .row .sixcol { width: 25%; }
 .row .sevencol{ width: 29.167%; }
-.row .eightcol { width: 33.334%; }
+.row .eightcol { width: 33.333%; }
 .row .ninecol{ width: 37.5%; }
 .row .tencol { width: 41.667%; }
 .row .elevencol { width: 45.834%; }
@@ -126,6 +126,9 @@ margin-bottom: 10px;
 .row .twentytwocol {width: 91.667%;}
 .row .twentythreecol { width: 95.834%; }
 .row .twentyfourcol {width: 100%; float: left;}
+.last {
+margin-right: 0px;
+}
 } /*END MEDIA QUERY*/
 
 .row::after {
