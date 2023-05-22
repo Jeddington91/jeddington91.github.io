@@ -1,0 +1,105 @@
+/* CSS Document */
+
+.slider_container{
+	width: 100%;
+	margin: 0 auto;
+	color: #FFF;
+}
+
+.slider_container_mobile{
+	width: 50%;
+	margin: 0 auto;
+	color: #FFF;
+}
+
+.carousel{
+	height: 460px;
+	position: relative;
+	overflow: hidden;
+}
+
+.carousel_mobile{
+	margin: 30px auto;
+	height: 340px;
+	position: relative;
+	overflow: hidden;
+}
+
+.slider{
+	height: 100%;
+	display: flex;
+	transition: all 0.3s;
+}
+
+.slider_mobile{
+	height: 100%;
+	display: flex;
+	transition: all 0.3s;
+}
+
+.slider section{
+	margin-top: 30px;
+	flex-basis: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.controls .arrow{
+	cursor: pointer;
+}
+
+.arrow.left{
+	width: 10%;
+	margin:15px 0px 0px 40%;
+}
+
+.arrow.right{
+	width: 10%;
+}
+.controls ul{
+	position:absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translate(-50%);
+	list-style: none;
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.controls_mobile ul{
+	position:absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%);
+	list-style: none;
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.controls ul li{
+	width: 10px;
+	height: 10px;
+	border: 2px solid #FFF;
+	border-radius: 50px;
+	margin: 10px;
+	cursor: pointer;
+}
+
+.controls_mobile ul li{
+	width: 10px;
+	height: 10px;
+	border: 2px solid #FFF;
+	border-radius: 50px;
+	margin: 10px;
+	cursor: pointer;
+}
+
+.controls ul li.selected{
+	background: #FFF;
+}
+
+.controls_mobile ul li.selected{
+	background: #FFF;
+}

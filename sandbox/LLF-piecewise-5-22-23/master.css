@@ -1,0 +1,512 @@
+/* Master CSS document for Lux Law Firm */
+
+/************************
+Font stacks used:
+Sans-serif: font-family: Helvetica,Arial,sans-serif;
+
+serif: font-family: Georgia, Times, Times New Roman, serif;
+
+Header text: font-family: 'Cinzel', serif;
+
+Poppins: font-family: 'Poppins', Helvetica, Arial, sans-serif;
+
+Frank Ruhl Libre: font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
+
+/*font imports*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&family=Poppins&display=swap');
+/********************************
+DESKTOP STYLES
+********************************/
+#banner_main{
+	background-image: url("./images/skyline_1_20.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 800px;
+	max-height: 1061px;
+	padding-bottom: 25px;
+}
+
+#banner_main_container{
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.site_head{
+    /*Site head placed in row div to fix at 1140 width*/
+    padding: 20px 0px;
+    vertical-align: middle;
+}
+
+#TL_logo{
+  max-height: 120px;
+}
+
+#header_right{
+  font-family: 'Cinzel', serif;
+  text-align: right;
+  padding: 12px 0px;
+  font-size: 1em;
+  color: #a47c4c;
+  font-weight: bold;
+}
+
+#phone_header{
+  font-size: 2.4em;
+  text-decoration: none;
+  color: black;
+  text-align: right;
+}
+
+#phone_header img{
+  height: 40px;
+  vertical-align: middle;
+}
+
+/*Slogan Text Styles*/
+
+	.slogan_text{
+		font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
+		text-align:center;
+		margin: 120px auto 50px;
+		color: #282828;
+
+	}
+	.init_border{border-top: 4px solid #a47c4c; padding-top: 5px;} /* Strictly for border prior text*/
+	.slogan_1{font-size:3.63em; line-height:1;}
+	.slogan_2{font-size:3.73em; line-height:1;}
+	.slogan_3{font-size:1.94em; line-height:1;font-family: Helvetica,Arial,sans-serif;}
+	.slogan_4{font-size:3.61em; line-height:1;}
+	.slogan_brown{color: #a47c4c}
+
+.testimonial_card{
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+}
+
+
+
+.close_quote{
+	width: 20px;
+	display: inline;
+
+}
+
+.testimonials_logo{
+	filter: brightness(0) invert(1);
+	display: inline-block;
+	float: right;
+	width: 77px;
+	margin-top:-10px;
+}
+
+.testimonial_card .five_stars{
+	width: 80px;
+	display: inline;
+}
+
+.testimonial_footer{
+	margin-top: 20px;
+	font-size: 1.25em;
+}
+
+.testimonial_footer > .reviewer_name{
+	color: #a47c4c;
+	font-size: 1.2em;
+	font-weight:600;
+	display: inline-block;
+}
+
+.reviewer_name > .location{
+	color: #fff;
+	font-size: 1em;
+	font-weight: 500;
+	display: inline;
+}
+
+.header_evaluation_button{
+	display: block;
+	background-color:#eab819;
+	color:#fff;
+	margin: 0px auto;
+	padding: 8px;
+	width: 80%;
+
+	text-align:center;
+	text-decoration:none;
+	font-size: 1.15em;
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	font-weight:500;
+
+}
+
+.accolades_banner img{
+	margin-top: 20px;
+}
+
+/* Main Styles */
+
+.main_heading{
+	font-size:2.3em;
+	font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
+	font-weight:500;
+	line-height:1.2;
+	margin: 28px 0px;
+	text-align: center;
+	padding-bottom:15px;
+	background: url(images/heading_bg1.png) no-repeat bottom;
+
+}
+
+.main_heading_alternate{
+	background: url("images/heading_bg2.png") no-repeat;
+	background-position: bottom left; 
+	text-align: left;
+
+}
+
+.page_text p{
+	font-family: 'Poppins',Helvetica,Arial,sans-serif;
+	padding: 10px;
+}
+
+.video_div{
+}
+
+.yt_embed{
+	box-shadow: -10px 10px 0px 0px #a47c4c;
+	margin-top: 120px;
+}
+.video_div_mobile, .yt_embed_mobile{
+	display: none;
+}
+
+.services_row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.our_services {
+  background-image: url("./images/skyline_1_20.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 825px;
+  padding-bottom: 25px;
+}
+
+.hover_card {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow:hidden;
+}
+
+.hover_card:before {
+  content: "";
+  display: block;
+  padding-top: 75%;
+}
+
+.domestic_violence, .drug_crimes, .marijuana, .dui_defense, .expungement, .felony_defense {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 515px;
+}
+
+.domestic_violence{background-image: url("./images/domestic_violence_bg3.jpg");}
+.drug_crimes{background-image: url("./images/drug_crimes_bg2.jpg");}
+.marijuana{background-image: url("./images/mj_cultivation_bg2.jpg");}
+.dui_defense{background-image: url("./images/dui_bg2.jpg");}
+.expungement{background-image: url("./images/expungement_bg2.jpg");}
+.felony_defense{background-image: url("./images/felony_defense_bg2.jpg");}
+
+.card_title {
+  margin: 0;
+  padding-top:20px;
+  background-color: rgba(164, 124, 76, 0.8);
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: bottom 0.3s ease;
+  font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
+  height: 15.5%;
+}
+
+.hover_card:hover .card_title {
+  bottom: 83%;
+}
+
+.card_content {
+  position: absolute;
+  top: 17%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(164, 124, 76, 0.8);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transition-delay: 0.15s;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+}
+.card_content p{
+	margin: 0px auto;
+	text-align: left;
+	max-width: 85%;
+	font-size: 1.15em;
+	margin-bottom: 25px;
+}
+
+
+.hover_card:hover .card_content {
+  opacity: 1;
+}
+
+.hover_card:not(:hover) .card_content {
+  opacity: 0;
+  transition-delay: 0s; /* No delay when returning to the bottom */
+}
+
+.readmore_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 25%;
+  margin: 10px auto;
+  margin-top: 10px;
+  padding: 8px 20px;
+  background-color: #fff;
+}
+
+.readmore_link {
+  color: rgba(164, 124, 76, 0.8);
+  text-decoration: none;
+}
+
+.value_section{
+	margin: 20px auto;
+}
+
+.portrait{
+	width:100%;
+	margin-top: 10px;
+	box-shadow: -110px -110px 0px -100px #a47c4c;
+	
+}
+
+.main_heading_desktop{
+	display: block;
+	visibility: visible;
+}
+
+.main_heading_mobile{
+	display: none;
+	visibility: hidden;
+}
+
+.mobile_slider{
+	display: none;
+}
+
+.mobile_accolades{
+	display: none;
+}
+
+/********************************
+MOBILE STYLES
+********************************/
+
+/* Hide Mobile Banner */
+
+#banner_main_container_mobile{
+	display:none;
+}
+
+
+@media handheld, only screen and (max-width: 860px){
+	/*Non-hidden option*//*
+	#phone_header,#header_right{
+	    text-align: center;
+	}
+	#phone_header{
+		font-size: 0.8em;
+		margin: 5px;
+	}
+	*/
+
+	/*Hidden Option*/
+	#banner_main_container{
+		display:none;
+	}
+
+	#banner_main_container_mobile{
+		display: contents;
+		gap: 1.5rem;
+		grid-template-columns: repeat(2, 1fr);
+		text-align: center;
+	}
+
+	#banner_main_container_mobile div{
+		display: grid;
+	}
+
+	#banner_main_container_mobile a:link{
+		text-decoration:none;
+	}
+
+	#header_right, #phone_header{
+	  text-align: center;
+	}
+
+	.cards{
+		grid-template-areas:
+    "a b"
+    "c d";
+		font-family: Helvetica,Arial,sans-serif;
+	}
+			.card1{grid-area: a;}
+			.card2{grid-area: b;}
+			.card3{grid-area: c;}
+			.card4{grid-area: d;}
+
+	.call_now, .email_now{
+		color: white;
+		font-weight: 700;
+
+		justify-content:center;
+		padding: 15px 0px;
+		margin-top: 15px;
+		margin-bottom:30px;
+		line-height: 30px;
+		font-size:1.5em;
+	}
+
+	.call_now img, .email_now img{
+		height: 30px;
+		margin:0px 5px;
+		vertical-align: middle;
+	}
+
+	.call_now{background-color: #a47c4c;}
+	.email_now{background-color: #282828;}
+
+	#TL_logo_mobile, #menu_icon_mobile{
+	  max-height: 120px;
+	}
+	#TL_logo_mobile{margin: 5% 0% 5% 15%;}
+	#menu_icon_mobile{margin: 8% 0% 5% 50%;}
+
+	/*Slogan Text Styles*/
+
+	.slogan_text{
+		font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
+		font-size: 38px;
+		margin-top:20px;
+	}
+	.init_border{border-top: 4px solid #a47c4c; padding-top: 5px;} /* Strictly for border prior text*/
+	.slogan_1{font-size:38px; margin: 10px 0px 0px;}
+	.slogan_2{font-size:39px;margin: 4px 0px;}
+	.slogan_3{font-size:20px;font-family: Helvetica,Arial,sans-serif;margin: 4px 0px;}
+	.slogan_4{font-size:38px;margin: 4px 0px;}
+	.slogan_brown{color: #a47c4c}
+
+	.mobile_evaluation_button{
+		max-width: 387px;
+	}
+
+	.mobile_slider{
+		display: contents;
+		height: 360px;
+}
+
+	.slider_mobile{
+		/*Dynamically sized in carousel js */
+		background: #212121;
+	}
+
+	.testimonial_card_mobile{
+		font-family: 'Poppins', Helvetica, Arial, sans-serif;
+		background-color: #212121;
+		padding: 5%;
+
+}
+
+	.testimonial_card_mobile > .testimonial_footer > .testimonials_logo{
+
+	}
+
+	.testimonial_card_mobile .five_stars_mobile{
+		width: 80px;
+		display: inline;
+}
+
+	.mobile_accolades{
+	display:block;
+}
+
+	.mobile_accolades img{
+		display:block;
+		margin: 0 auto;
+		width:50%;
+	}
+
+	.video_div, .yt_embed{
+		display: none;
+	}
+
+	.video_div_mobile{
+		display:block!important;
+		margin: 10px auto;
+	}
+
+	.yt_embed_mobile{
+		box-shadow: -10px 10px 0px 0px #a47c4c;
+		display:block!important;
+		margin: 0 auto 25px;
+	}
+	
+	/*Start Our Services Slider Stylings Mobile*/
+	
+	
+	.services_desktop{
+		display:none;
+		visibility: hidden;
+	}
+	
+	.main_heading_desktop{
+		display: none;
+		visibility: hidden;
+	}
+
+	.main_heading_mobile{
+		display: block;
+		visibility: visible;
+		text-align: center;
+		background: url(images/heading_bg1.png) no-repeat bottom;
+	}
+} /*End Media Query for Mobile*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
