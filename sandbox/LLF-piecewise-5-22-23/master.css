@@ -126,6 +126,10 @@ DESKTOP STYLES
 	display: inline-block;
 }
 
+.slider_container.headerTestimonial {
+  box-shadow: 10px 6px 0px 0px rgba(40,40,40,0.3); /* Box shadow properties */
+}
+
 .reviewer_name > .location{
 	color: #fff;
 	font-size: 1em;
