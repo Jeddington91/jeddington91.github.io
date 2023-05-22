@@ -81,9 +81,16 @@ DESKTOP STYLES
 
 .testimonial_card{
 	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	padding: 25px 1px 0px 5px;
 }
 
 
+.open_quote{
+	max-width: 20%;
+}
 
 .close_quote{
 	width: 20px;
