@@ -87,7 +87,6 @@ DESKTOP STYLES
 	padding: 40px 1px 0px 10px;
 }
 
-
 .open_quote{
 	max-width: 48px;
 }
@@ -96,6 +95,10 @@ DESKTOP STYLES
 	width: 20px;
 	display: inline;
 
+}
+
+.testimonial_card p:empty + .close_quote {
+  display: none;
 }
 
 .testimonials_logo{
