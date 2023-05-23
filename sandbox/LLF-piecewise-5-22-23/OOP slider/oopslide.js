@@ -88,4 +88,7 @@ class Slider {
 //   const headerTestimonialSlider = new Slider('.slider_container.headerTestimonial .slider', '.slider_container.headerTestimonial .controls');
 //   headerTestimonialSlider.init();
 
+//   const headerTestimonialSliderMobile = new Slider('.slider_container.headerTestimonialMobile .slider', '.slider_container.headerTestimonial .controls');
+//   headerTestimonialSlider.init();
+
 
