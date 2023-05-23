@@ -150,7 +150,9 @@ DESKTOP STYLES
   background-color: rgba(40,40,40, 1);
 }
 
-
+.slider_container.servicesMobile{
+	width: 95%;
+}
 
 .reviewer_name > .location{
 	color: #fff;
@@ -216,11 +218,7 @@ DESKTOP STYLES
 	display: none;
 }
 
-.services_row{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+
 
 .our_services {
   background-image: url("./images/skyline_1_20.png");
@@ -529,6 +527,13 @@ MOBILE STYLES
 		visibility: visible;
 		text-align: center;
 		background: url(images/heading_bg1.png) no-repeat bottom;
+	}
+	
+	/**************************
+	Mobile Portrait Stylings
+	**************************/
+	.portrait{
+		width:50%;
 	}
 } /*End Media Query for Mobile*/
 

@@ -76,16 +76,22 @@ class Slider {
      }
    }
 
-class MultiSlider extends Slider {
-  constructor(sliderSelector, controlsSelector, visibleSlides) {
-    super(sliderSelector, controlsSelector);
+class MultiSlider {
+  constructor(sliderSelector, controlsSelector, visibleSlides, slideMargin) {
+    // Initialize the slider and controls elements based on the provided selectors
+    this.sliderElement = document.querySelector(sliderSelector);
+    this.controlsElement = document.querySelector(controlsSelector);
+    this.sectionIndex = 0;
     this.visibleSlides = visibleSlides;
+    this.slideMargin = slideMargin;
+    
+    // get the number of slides from the current slider
+    this.numberOfSlides = this.sliderElement.getElementsByTagName('section').length;
+    // dynamically set the width of the current slider
+    this.sliderElement.style.width = `${(this.numberOfSlides * (this.slideWidth + this.slideMargin))}%`;
+    // Slide to the current section
+    this.sliderElement.style.transform = `translate(${this.sectionIndex * -(this.slideWidth + this.slideMargin)}%)`;
   }
-
-  updateSliderWidth() {
-    this.sliderElement.style.width = `${this.numberOfSlides * (100 / this.visibleSlides)}%`;
-  }
-}
 
    // Create & Initialize new slider's here. (.slider_container.(*slider name by class (div parent of "slider")*) .slider, .slider_container.* .controls );
    // Place each used on each page in script tag of each page.
