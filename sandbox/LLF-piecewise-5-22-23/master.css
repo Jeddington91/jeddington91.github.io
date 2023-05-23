@@ -152,6 +152,8 @@ DESKTOP STYLES
 
 .slider_container.servicesMobile{
 	width: 95%;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
 .reviewer_name > .location{
