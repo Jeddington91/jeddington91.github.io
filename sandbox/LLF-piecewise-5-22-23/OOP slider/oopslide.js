@@ -77,8 +77,9 @@ class Slider {
    }
 
 class MultiSlider {
-  constructor(sliderSelector, controlsSelector, visibleSlides, slideMargin) {
+  constructor(sliderSelector, controlsSelector, visibleSlides, slideMargin, sliderWidth=100) {
     this.sliderElement = document.querySelector(sliderSelector);
+	this.sliderWidth = sliderWidth;
     this.controlsElement = document.querySelector(controlsSelector);
     this.sectionIndex = 0;
     this.visibleSlides = visibleSlides;
@@ -122,9 +123,7 @@ slide(index) {
   }
 
   // Calculate the slide offset based on the total width of the slider, controls, and margins
-  const totalWidth = parseFloat(this.sliderElement.style.width); // Get the total width in percentage
-  const numberOfControls = this.controlsElement.querySelectorAll('li').length;
-  const slideOffset = -index * (totalWidth / (this.numberOfSlides - numberOfControls));
+  const slideOffset = -index * ((this.slideWidth * this.visibleSlides) + (this.slideMargin * 2));
 
   // Slide to the current section
   this.sliderElement.style.transform = `translate(${slideOffset}%)`;
