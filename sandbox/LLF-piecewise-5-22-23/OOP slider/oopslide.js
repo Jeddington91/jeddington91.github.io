@@ -50,6 +50,9 @@ class Slider {
 		clearTimeout(this.autoScrollTimeout);
 		this.autoScrollTimeout = setTimeout(() => {
 			this.sectionIndex = (this.sectionIndex + 1) % this.numberOfSlides;
+			if (this.sectionIndex >= this.numberOfSlides / this.visibleSlides) { //Check for multislider
+  			this.sectionIndex = 0; // Set sectionIndex to the first slide
+			}
 			this.slide(this.sectionIndex);
 			this.autoScroll();
 		}, 7000);
@@ -72,6 +75,17 @@ class Slider {
        this.autoScroll();
      }
    }
+
+class MultiSlider extends Slider {
+  constructor(sliderSelector, controlsSelector, visibleSlides) {
+    super(sliderSelector, controlsSelector);
+    this.visibleSlides = visibleSlides;
+  }
+
+  updateSliderWidth() {
+    this.sliderElement.style.width = `${this.numberOfSlides * (100 / this.visibleSlides)}%`;
+  }
+}
 
    // Create & Initialize new slider's here. (.slider_container.(*slider name by class (div parent of "slider")*) .slider, .slider_container.* .controls );
    // Place each used on each page in script tag of each page.

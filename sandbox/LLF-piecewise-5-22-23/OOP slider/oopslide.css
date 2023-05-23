@@ -58,3 +58,20 @@
 .controls li.selected {
     opacity: 1;
 }
+
+
+/***********************************
+LLF Modificatons
+***********************************/
+
+.slider_container.servicesMobile {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.slider_container.servicesMobile .slider section{
+  width: 50%;
+  float: left;
+
+}
