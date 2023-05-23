@@ -4,7 +4,7 @@
 // Define the Slider class
 class Slider {
   constructor(sliderSelector, controlsSelector) {
-	// Initialize the slider and controls elements based on the provided selectors
+    // Initialize the slider and controls elements based on the provided selectors
     this.sliderElement = document.querySelector(sliderSelector);
     this.controlsElement = document.querySelector(controlsSelector);
     this.sectionIndex = 0;
@@ -12,23 +12,42 @@ class Slider {
     this.numberOfSlides = this.sliderElement.getElementsByTagName('section').length;
     // dynamically set the width of the current slider
     this.sliderElement.style.width = `${this.numberOfSlides * 100}%`;
-  }
-
-	
-  // Method to handle sliding to a specific slide
-  slide(index) {
-   // Remove 'selected' class from previously selected indicator
-   const previousSelected = this.controlsElement.querySelector('.selected');
-   if (previousSelected) previousSelected.classList.remove('selected');
-
-   // Add 'selected' class to the current indicator
-   const currentIndicator = this.controlsElement.children[index];
-   if (currentIndicator) currentIndicator.classList.add('selected');
-
-   // Slide to the current section
+	   // Slide to the current section
    this.sliderElement.style.transform = `translate(${index * -100}%)`;
   }
 
+  slide(index) {
+    // Remove 'selected' class from previously selected indicator
+    const previousSelected = this.controlsElement.querySelector('.selected');
+    if (previousSelected) previousSelected.classList.remove('selected');
+
+    // Add 'selected' class to the current indicator
+    const currentIndicator = this.controlsElement.children[index];
+    if (currentIndicator) {
+      currentIndicator.classList.add('selected');
+    }
+
+    // Slide to the current section
+    this.sliderElement.style.transform = `translate(${index * -100}%)`;
+
+    // Update the active indicator
+    this.updateActiveIndicator();
+  }
+
+  updateActiveIndicator() {
+    const indicators = this.controlsElement.querySelectorAll('li');
+
+    // Remove the .selected class from all indicators
+    indicators.forEach(indicator => {
+      indicator.classList.remove('selected');
+    });
+
+    // Add the .selected class to the active indicator
+    const activeIndicator = indicators[this.sectionIndex];
+    if (activeIndicator) {
+      activeIndicator.classList.add('selected');
+    }
+  }
 	// Auto-scroll method (7s)
 	autoScroll() {
 		clearTimeout(this.autoScrollTimeout);
