@@ -84,36 +84,54 @@ class MultiSlider {
     this.visibleSlides = visibleSlides;
     this.slideMargin = slideMargin;
 
-    this.slideWidth = ((100 - (this.slideMargin * (this.visibleSlides - 1))) / this.visibleSlides).toFixed(2);
+	// Get the parent container element
+	const parentContainer = document.querySelector('.slider_container');
+	// Get the computed width of the parent container
+	const parentWidth = parseFloat(window.getComputedStyle(parentContainer).width);
+	// Calculate the slide width relative to the parent container width
+	this.slideWidth = ((parentWidth - (this.slideMargin * (this.visibleSlides - 1))) / this.visibleSlides).toFixed(2);
+
     this.numberOfSlides = this.sliderElement.getElementsByTagName('section').length;
-    this.sliderElement.style.width = `${(this.numberOfSlides * (this.slideWidth + this.slideMargin)) - this.slideMargin}%`;
+	this.sliderElement.style.width = `${(this.numberOfSlides * this.slideWidth) + ((this.numberOfSlides - 1) * this.slideMargin)}%`;
     this.sliderElement.style.transform = `translate(${this.sectionIndex * -(this.slideWidth + this.slideMargin) * this.visibleSlides}%)`;
+	this.applySlideMargin();
 
     this.autoScrollTimeout = null; // Added to keep track of the auto-scroll timeout
   }
 	// Multiple slides requires margin in between (or 0 last parameter if not)
 	applySlideMargin() {
-    const slides = this.sliderElement.querySelectorAll('section');
-		slides.forEach(slide => {
+		const slides = this.sliderElement.querySelectorAll('section');
+		slides.forEach((slide, index) => {
+		if (index < slides.length - 1) {
 			slide.style.marginRight = `${this.slideMargin}%`;
+			} else {
+			slide.style.marginRight = '0';
+			}
 		});
 	}
 	
-	slide(index) {
-    // Remove 'selected' class from previously selected indicator
-		const previousSelected = this.controlsElement.querySelector('.selected');
-			if (previousSelected) previousSelected.classList.remove('selected');
-		// Add 'selected' class to the current indicator
-		const currentIndicator = this.controlsElement.children[index];
-			if (currentIndicator) {
-				currentIndicator.classList.add('selected');
-			}
+slide(index) {
+  // Remove 'selected' class from previously selected indicator
+  const previousSelected = this.controlsElement.querySelector('.selected');
+  if (previousSelected) previousSelected.classList.remove('selected');
 
-		// Slide to the current section
-		this.sliderElement.style.transform = `translate(${index * -100}%)`;
-		// Update the active indicator
-		this.updateActiveIndicator();
+  // Add 'selected' class to the current indicator
+  const currentIndicator = this.controlsElement.children[index];
+  if (currentIndicator) {
+    currentIndicator.classList.add('selected');
   }
+
+  // Calculate the slide offset based on the total width of the slider, controls, and margins
+  const totalWidth = parseFloat(this.sliderElement.style.width); // Get the total width in percentage
+  const numberOfControls = this.controlsElement.querySelectorAll('li').length;
+  const slideOffset = -index * (totalWidth / (this.numberOfSlides - numberOfControls));
+
+  // Slide to the current section
+  this.sliderElement.style.transform = `translate(${slideOffset}%)`;
+
+  // Update the active indicator
+  this.updateActiveIndicator();
+}
 
   updateActiveIndicator() {
     const indicators = this.controlsElement.querySelectorAll('li');
@@ -155,9 +173,9 @@ class MultiSlider {
 	
 	//Method to initialize controls and autoscrolling
     init() {
-	   this.applySlideMargin();
-       this.setupListeners();
-       this.autoScroll();
+		this.applySlideMargin();
+		this.setupListeners();
+		this.autoScroll();
      }
 }
    // Create & Initialize new slider's here. (.slider_container.(*slider name by class (div parent of "slider")*) .slider, .slider_container.* .controls );
