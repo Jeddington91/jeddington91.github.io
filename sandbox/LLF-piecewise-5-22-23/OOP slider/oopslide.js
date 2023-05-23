@@ -12,15 +12,12 @@ class Slider {
     this.numberOfSlides = this.sliderElement.getElementsByTagName('section').length;
     // dynamically set the width of the current slider
     this.sliderElement.style.width = `${this.numberOfSlides * 100}%`;
-	   // Slide to the current section
-   this.sliderElement.style.transform = `translate(${index * -100}%)`;
   }
 
   slide(index) {
     // Remove 'selected' class from previously selected indicator
     const previousSelected = this.controlsElement.querySelector('.selected');
     if (previousSelected) previousSelected.classList.remove('selected');
-
     // Add 'selected' class to the current indicator
     const currentIndicator = this.controlsElement.children[index];
     if (currentIndicator) {
@@ -87,8 +84,6 @@ class Slider {
 //
 //   const wideSlider = new Slider('.slider_container.wide .slider', '.slider_container.wide .controls');
 //   wideSlider.init();
-//
-//   
 //
 //   const headerTestimonialSlider = new Slider('.slider_container.headerTestimonial .slider', '.slider_container.headerTestimonial .controls');
 //   headerTestimonialSlider.init();
