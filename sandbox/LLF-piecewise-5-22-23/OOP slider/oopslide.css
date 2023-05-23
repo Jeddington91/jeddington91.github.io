@@ -74,7 +74,7 @@ LLF Modificatons
   width: 49%;
 }
 
-.servicesMobile.slider .controls {
+.slider_container.servicesMobile .slider .controls {
     position: absolute;
     bottom: -10px; /* distance from the bottom */
     left: 50%; /* half the parent width */
@@ -85,7 +85,7 @@ LLF Modificatons
     padding: 0;
 }
 
-.servicesMobile.slider .controls li {
+.slider_container.servicesMobile .slider .controls li {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -96,6 +96,6 @@ LLF Modificatons
     opacity: 0.8;
 }
 
-.servicesMobile.slider .controls li.selected {
+.slider_container.servicesMobile .slider .controls li.selected {
     opacity: 1;
 }
