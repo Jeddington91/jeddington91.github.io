@@ -88,6 +88,7 @@ DESKTOP STYLES
 	flex-direction: column;
 	text-align: left;
 	padding: 40px 15px 0px 15px;
+	color: #fff;
 }
 
 .testimonial_card_mobile{
@@ -96,6 +97,7 @@ DESKTOP STYLES
 	flex-direction: column;
 	text-align: left;
 	padding: 10px 15px 0px 15px;
+	color: #fff;
 }
 
 .open_quote{
@@ -170,7 +172,6 @@ DESKTOP STYLES
 	margin: 0px auto;
 	padding: 8px;
 	width: 80%;
-
 	text-align:center;
 	text-decoration:none;
 	font-size: 1.15em;
@@ -236,12 +237,6 @@ DESKTOP STYLES
   flex-direction: column;
   justify-content: center;
   overflow:hidden;
-}
-
-.hover_card:before {
-  content: "";
-  display: block;
-  padding-top: 75%;
 }
 
 .domestic_violence, .drug_crimes, .marijuana, .dui_defense, .expungement, .felony_defense {
@@ -350,6 +345,11 @@ DESKTOP STYLES
 .mobile_accolades{
 	display: none;
 }
+
+.services_mobile{
+		display:none;
+		visibility: hidden;
+	}
 
 /********************************
 MOBILE STYLES
@@ -466,14 +466,10 @@ MOBILE STYLES
 
 	.testimonial_card_mobile{
 		font-family: 'Poppins', Helvetica, Arial, sans-serif;
-		background-color: #212121;
 		padding: 5%;
 
 }
 
-	.testimonial_card_mobile > .testimonial_footer > .testimonials_logo{
-
-	}
 
 	.testimonial_card_mobile .five_stars_mobile{
 		width: 80px;
@@ -513,14 +509,31 @@ MOBILE STYLES
 		visibility: hidden;
 	}
 	
-	.servicesMobile{
-		width: 90%;
+	
+	.services_mobile{
+		display: contents;
+		visibility: visible;
 	}
 	
 	.main_heading_desktop{
 		display: none;
 		visibility: hidden;
 	}
+	
+	.services_mobile > .hover_card{
+		width: 48%;
+		box-sizing:border-box;
+	}
+	
+	.hover_card.drug_crimes, .hover_card.dui_defense, .hover_card.felony_defense{
+		float: right;
+		display: inline;
+	}
+	.hover_card {
+	  position: relative;
+	  display: inline;
+	  overflow:hidden;
+}
 
 	.main_heading_mobile{
 		display: block;
