@@ -524,15 +524,21 @@ MOBILE STYLES
 		width: 48%;
 		box-sizing:border-box;
 	}
-	
+	.hover_card.domestic_violence, .hover_card.marijuana, .hover_card.expungement{
+		float: left;
+		display: inline;
+		margin-left:1%;
+	}
 	.hover_card.drug_crimes, .hover_card.dui_defense, .hover_card.felony_defense{
 		float: right;
 		display: inline;
+		margin-right:2%;
 	}
 	.hover_card {
 	  position: relative;
 	  display: inline;
 	  overflow:hidden;
+	  margin-bottom: 10px;
 }
 
 	.main_heading_mobile{
