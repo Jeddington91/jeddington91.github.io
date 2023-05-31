@@ -38,7 +38,7 @@ DESKTOP STYLES
 }
 
 .banner{
-	padding-top: 25px;
+	padding: 25px 0px;
 }
 
 #TL_logo{
@@ -198,12 +198,51 @@ DESKTOP STYLES
 
 }
 
-.main_heading_alternate{
+.main_heading_alternate.desktop{
 	background: url("images/heading_bg2.png") no-repeat;
 	background-position: bottom left; 
 	text-align: left;
 
 }
+
+.protect_my_rights .main_heading_alternate{
+	padding: 10px;
+}
+
+.relative_for_border{
+	position: relative;
+}
+.top_left_border{
+	position: relative;
+	border-top: solid 8px #a47c4c;
+	border-left: solid 8px #a47c4c;
+}
+
+.top_left_border::before{
+	content:'';
+	display: block;
+	position: absolute;
+	height: 25%;
+	bottom: 0px;
+	left: -10px;
+	border: solid 10px #fff;
+}
+
+.top_left_border::after{
+	content:'';
+	display: block;
+	position: absolute;
+	width: 50%;
+	top: -10px;
+	right:0;
+	border: solid 10px #fff;
+}
+
+.bottom_right_border{
+	box-shadow: 910px 910px 0px -900px #a47c4c;
+}
+
+
 
 .page_text p{
 	font-family: 'Poppins',Helvetica,Arial,sans-serif;
@@ -321,12 +360,24 @@ DESKTOP STYLES
 	margin: 20px auto;
 }
 
-.portrait{
-	width:100%;
+.value_section .portrait{
+	width: 100%;
 	margin-top: 10px;
 	box-shadow: -110px -110px 0px -100px #a47c4c;
 	
 }
+
+.protect_my_rights .portrait{
+	line-height: 0%;
+	margin-top: 110px;
+	
+	height: 85%;
+	display:block;
+	
+	box-shadow: 160px 160px 0px -150px #a47c4c;
+	margin-bottom: 10px;
+}
+
 
 .main_heading_desktop{
 	display: block;
@@ -348,6 +399,11 @@ DESKTOP STYLES
 
 .services_mobile{
 		display:none;
+		visibility: hidden;
+	}
+
+.protect_my_rights .portrait_mobile, .protect_my_rights .main_heading_alternate.mobile{
+		display: none;
 		visibility: hidden;
 	}
 
@@ -450,7 +506,7 @@ MOBILE STYLES
 	.slogan_3{font-size:20px;font-family: Helvetica,Arial,sans-serif;margin: 4px 0px;}
 	.slogan_4{font-size:38px;margin: 4px 0px;}
 	.slogan_brown{color: #a47c4c}
-
+	
 	.mobile_evaluation_button{
 		max-width: 387px;
 	}
@@ -556,12 +612,50 @@ MOBILE STYLES
 		background: url(images/heading_bg1.png) no-repeat bottom;
 	}
 	
+	.protect_my_rights .portrait.desktop{
+		display: none;
+		visibility: hidden;
+	}
+	
+	.protect_my_rights .portrait_mobile{
+		display: block;
+		visibility:visible;
+		box-shadow: -110px -110px 0px -100px #a47c4c;
+		width: 80%;
+		margin: 0 auto;
+	}
+	
+	.protect_my_rights .main_heading_alternate.desktop{
+		display: none;
+		visibility:hidden;
+	}
+	
+	.protect_my_rights .main_heading_alternate.mobile{
+		display: block;
+		visibility:visible;
+		margin-left: 5%;
+		background: url("images/heading_bg2.png") no-repeat;
+		background-position: 2% 100%; 
+		text-align: left;
+	}
+	
+	.main_heading_alternate.desktop{
+	
+
+}
+	
+	p.mobile{
+		width: 80%;
+		margin: 0 auto;
+	}
 	/**************************
 	Mobile Portrait Stylings
 	**************************/
-	.portrait{
-		width:50%;
+	
+	.value_section .portrait{
+		width: 50%;
 	}
+	
 } /*End Media Query for Mobile*/
 
 
