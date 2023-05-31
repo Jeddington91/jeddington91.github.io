@@ -146,7 +146,6 @@ DESKTOP STYLES
 
 .slider_container.headerTestimonialMobile {
   box-shadow: 10px 10px 0px 0px rgba(40,40,40,0.3); /* Box shadow properties */
-  margin-top: 25px;
   width: 80%;
   height: 300px;
   background-color: rgba(40,40,40, 1);
@@ -198,6 +197,10 @@ DESKTOP STYLES
 
 }
 
+.main_heading_white{
+	color: #fff;
+}
+
 .main_heading_alternate.desktop{
 	background: url("images/heading_bg2.png") no-repeat;
 	background-position: bottom left; 
@@ -241,7 +244,6 @@ DESKTOP STYLES
 .bottom_right_border{
 	box-shadow: 910px 910px 0px -900px #a47c4c;
 }
-
 
 
 .page_text p{
@@ -378,6 +380,16 @@ DESKTOP STYLES
 	margin-bottom: 10px;
 }
 
+.results_section{
+	background: url("images/skyline_1_black.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 750px;
+	max-height: 775px;
+	padding-bottom: 25px;
+}
+
 
 .main_heading_desktop{
 	display: block;
@@ -406,6 +418,11 @@ DESKTOP STYLES
 		display: none;
 		visibility: hidden;
 	}
+
+.accolades_banner_mobile img{
+	display: none;
+	visibility: hidden;
+}
 
 /********************************
 MOBILE STYLES
@@ -441,7 +458,8 @@ MOBILE STYLES
 		text-align: center;
 	}
 	#banner_main{
-		max-height: 860px;
+		max-height: 950px;
+		padding-bottom: 40px;
 	}
 	#banner_main_container_mobile div{
 		display: grid;
@@ -532,16 +550,13 @@ MOBILE STYLES
 		display: inline;
 }
 
-	.mobile_accolades{
-	display:block;
-}
-
-	.mobile_accolades img{
-		display:block;
-		margin: 0 auto;
-		width:50%;
+	.accolades_banner_mobile img{
+			display:block;
+			visibility: visible;
+			margin: 25px auto;
+			width:50%;
 	}
-
+	
 	.video_div, .yt_embed{
 		display: none;
 	}
@@ -641,13 +656,29 @@ MOBILE STYLES
 	
 	.main_heading_alternate.desktop{
 	
-
-}
+	}
 	
 	p.mobile{
 		width: 80%;
 		margin: 0 auto;
 	}
+	
+	p.mobile.bottom_right_border{
+		border-right: solid 8px #a47c4c;
+		border-bottom: solid 8px #a47c4c;
+	}
+	
+/*
+	p.mobile.bottom_right_border::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 25%;
+    bottom: -10px;
+    left: 0px;
+    border: solid 10px #fff;
+}
+*/
 	/**************************
 	Mobile Portrait Stylings
 	**************************/
