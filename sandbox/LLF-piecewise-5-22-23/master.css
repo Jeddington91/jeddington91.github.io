@@ -27,11 +27,18 @@ DROP DOWN MENU
   position: absolute;
   z-index: 999;
   transition: max-height 0.3s ease;
-  right: 4.16%;
+  margin-top: -20px;
+  width: 428.5px;
+}
+
+@media (max-width: 1140px){
+	.menu{
+		width: inherit;
+	}
 }
 
 .menu.show {
-  max-height: 500px; /* Adjust the value as needed */
+  max-height: 706px; /* Adjust the value as needed */
 }
 
 .submenu {
@@ -41,17 +48,21 @@ DROP DOWN MENU
 }
 
 .submenu.show {
-  max-height: 200px; /* Adjust the value as needed */
+  max-height: 424px; /* Adjust the value as needed */
 }
 
 .menu > .list li{
-	width: 300px;
 	background-color: #fff;
 	color: #000;
 	font-family: 'Poppins', Helvetica, Arial, sans-serif;
-	border-bottom: solid 2px #000;
-	padding: 5px 10px;
+	border-bottom: solid 1px #000;
+	padding: 5px 0px 5px 10px;
 	
+}
+
+.menu > .list > li.has_submenu > ul > li{
+	border-top: solid 1px #000;
+	border-bottom: none;
 }
 
 /********************************
@@ -494,6 +505,10 @@ DESKTOP STYLES
 	margin-top: 25px;
 }
 
+.choose_firm{
+	padding-bottom: 10px;
+}
+
 .choose_firm .main_heading_alternate{
 	font-size:2.1em;
 	font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
@@ -502,27 +517,84 @@ DESKTOP STYLES
 	margin: 0px 0px;
 	padding: 10px 15px 15px;
 	background: url(images/heading_bg2.png) no-repeat bottom left;
+	background-position: 5% 100%;
 	text-align: left;
+	border-top: solid 8px #a47c4c;
+	border-left: solid 8px #a47c4c;
+	position: relative;
+}
+
+.choose_firm .main_heading_alternate::after{
+	content:'';
+	display: block;
+	position: absolute;
+	width: 25%;
+	top: -8px;
+	right:0;
+	border: solid 8px #fff;
 }
 
 .choose_firm .card{
 	background-color: #ededed;
-	height: 200px;
 	text-align: center;
-	width: 45%;
 	margin: 5px;
 	padding: 5px;
 	display: inline-block;
 }
 
-.choose_firm .card_right{
-	float: right;	
+.choose_firm .card:hover{
+	background-color: #a47c4c;
+	color: #fff;
+}
+
+.choose_firm .card:not(:hover) + .white_hover{
+	display:none;
+	visibility: collapse;
+}
+
+.choose_firm .card:hover + .white_hover{
+	display:block;
+	visibility: visible;
+}
+
+/*********************
+Jeddington ^^^ 3 above
+*******************/
+
+.choose_firm .card img{
+	margin: 20px auto 10px;
+}
+
+.choose_firm .card .title{
+	font-size: 1.5em;
+	font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
+}
+
+.choose_firm .card .content{
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	margin: 5px auto 20px;
 }
 
 .row.choose_firm{
 	margin-top: 50px;
 }
 
+.row.cf_grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.choose_firm .portrait{
+	max-height: 607px;
+	float: right;
+	display:block;
+	margin-bottom: 10px;
+	box-shadow: 160px 160px 0px -150px #a47c4c;
+}
+
+.news_insights{
+	margin-top: 50px;
+}
 /*****************************
 Hidden Desktop tags for mobile
 *****************************/
