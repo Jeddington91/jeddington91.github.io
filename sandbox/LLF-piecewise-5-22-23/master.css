@@ -15,9 +15,49 @@ Frank Ruhl Libre: font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif
 /*font imports*/
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&family=Poppins&display=swap');
+
+
+/*****************
+DROP DOWN MENU
+*****************/
+
+.menu {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 999;
+  transition: max-height 0.3s ease;
+  right: 4.16%;
+}
+
+.menu.show {
+  max-height: 500px; /* Adjust the value as needed */
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.submenu.show {
+  max-height: 200px; /* Adjust the value as needed */
+}
+
+.menu > .list li{
+	width: 300px;
+	background-color: #fff;
+	color: #000;
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	border-bottom: solid 2px #000;
+	padding: 5px 10px;
+	
+}
+
 /********************************
 DESKTOP STYLES
 ********************************/
+
 #banner_main{
 	background-image: url("./images/skyline_1_20.png");
 	background-repeat: no-repeat;
@@ -434,6 +474,7 @@ DESKTOP STYLES
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	margin-bottom: 25px;
 }
 
 .violated_rights .main_heading_alternate{
@@ -451,6 +492,35 @@ DESKTOP STYLES
 	padding-right: 20px;
 	font-family: 'Poppins', Helvetica, Arial, sans-serif;
 	margin-top: 25px;
+}
+
+.choose_firm .main_heading_alternate{
+	font-size:2.1em;
+	font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
+	font-weight:400;
+	line-height:1.1;
+	margin: 0px 0px;
+	padding: 10px 15px 15px;
+	background: url(images/heading_bg2.png) no-repeat bottom left;
+	text-align: left;
+}
+
+.choose_firm .card{
+	background-color: #ededed;
+	height: 200px;
+	text-align: center;
+	width: 45%;
+	margin: 5px;
+	padding: 5px;
+	display: inline-block;
+}
+
+.choose_firm .card_right{
+	float: right;	
+}
+
+.row.choose_firm{
+	margin-top: 50px;
 }
 
 /*****************************
