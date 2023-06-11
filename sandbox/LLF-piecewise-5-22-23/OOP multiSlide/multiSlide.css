@@ -1,0 +1,46 @@
+/* CSS Document */
+
+.multi_slider_container{
+	width: 100%;
+	margin: 10px auto;
+	border: 2px solid blue;
+	overflow: hidden;
+}
+
+.multi_carousel{
+	border: 2px solid green;
+	height: 400px;
+}
+
+.multi_slider{
+	height: 100%;
+	width: 300%;
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 0px;
+/*	border: 1px solid red;*/
+	transform: translate(0%);
+	
+}
+
+.multi_slider section{
+	background-color: grey;
+	margin: 10px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.controls .arrow{
+	position: absolute;
+	cursor: pointer;
+}
+
+.arrow.left{
+	left: 10px;
+}
+
+.arrow.right{
+	right: 10px;
+}

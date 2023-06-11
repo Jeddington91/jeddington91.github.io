@@ -256,7 +256,6 @@ DESKTOP STYLES
 	background: url("images/heading_bg2.png") no-repeat;
 	background-position: bottom left; 
 	text-align: left;
-
 }
 
 .protect_my_rights .main_heading_alternate{
@@ -312,7 +311,6 @@ DESKTOP STYLES
 .video_div_mobile, .yt_embed_mobile{
 	display: none;
 }
-
 
 
 .our_services {
@@ -547,12 +545,22 @@ DESKTOP STYLES
 	color: #fff;
 }
 
-.choose_firm .card:not(:hover) + .white_hover{
+.choose_firm .card:not(:hover) img.white_hover{
 	display:none;
 	visibility: collapse;
 }
 
-.choose_firm .card:hover + .white_hover{
+.choose_firm .card:hover img.white_hover{
+	display:block;
+	visibility: visible;
+}
+
+.choose_firm .card:hover img.original_hover{
+	display:none;
+	visibility: collapse;
+}
+
+.choose_firm .card:not(:hover) img.original_hover{
 	display:block;
 	visibility: visible;
 }
