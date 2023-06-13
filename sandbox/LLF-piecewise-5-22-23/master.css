@@ -14,9 +14,14 @@ Frank Ruhl Libre: font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif
 
 /*font imports*/
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;600;700&family=Poppins&display=swap');
 
 
+
+
+img#menu_selector{
+  cursor: pointer;
+}
 /*****************
 DROP DOWN MENU
 *****************/
@@ -97,19 +102,21 @@ DESKTOP STYLES
 }
 
 #header_right{
-  font-family: 'Cinzel', serif;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   text-align: right;
   padding: 12px 0px;
   font-size: 1em;
   color: #a47c4c;
-  font-weight: bold;
+/*  font-weight: bold;*/
 }
 
 #phone_header{
+  font-family: 'Cinzel', serif;
   font-size: 2.4em;
   text-decoration: none;
   color: black;
   text-align: right;
+  font-weight: bold;
 }
 
 #phone_header img{
@@ -162,7 +169,7 @@ DESKTOP STYLES
 
 }
 
-.testimonials_logo{
+.testimonial_card .testimonials_logo{
 	filter: brightness(0) invert(1);
 	display: inline-block;
 	float: right;
@@ -236,14 +243,19 @@ DESKTOP STYLES
 
 /* Main Styles */
 
+.main_introduction{
+	padding: 25px 0px;
+	margin: 50px 0px;
+}
+
 .main_heading{
-	font-size:2.3em;
+	font-size: 2.8em;
 	font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
-	font-weight:500;
+	font-weight:600;
 	line-height:1.2;
-	margin: 28px 0px;
+	margin: 20px 0px 30px;
 	text-align: center;
-	padding-bottom:15px;
+	padding-bottom:20px;
 	background: url(images/heading_bg1.png) no-repeat bottom;
 
 }
@@ -313,12 +325,13 @@ DESKTOP STYLES
 }
 
 
-.our_services {
+div.our_services {
   background-image: url("./images/skyline_1_20.png");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 825px;
-  padding-bottom: 25px;
+  padding: 75px 0px;
+  margin: 25px 0px;
 }
 
 .hover_card {
@@ -340,7 +353,7 @@ DESKTOP STYLES
 .marijuana{background-image: url("./images/mj_cultivation_bg2.jpg");}
 .dui_defense{background-image: url("./images/dui_bg2.jpg");}
 .expungement{background-image: url("./images/expungement_bg2.jpg");}
-.felony_defense{background-image: url("./images/felony_defense_bg2.jpg");}
+.felony_defense{background-image: url("./images/felony_defense_bg4.jpg");}
 
 .card_title {
   margin: 0;
@@ -408,7 +421,8 @@ DESKTOP STYLES
 }
 
 .value_section{
-	margin: 20px auto;
+	margin: 50px auto;
+	padding: 50px 0px;
 }
 
 .value_section .portrait, .violated_rights .portrait{
@@ -417,7 +431,93 @@ DESKTOP STYLES
 	box-shadow: -110px -110px 0px -100px #a47c4c;
 	
 }
+/*Client Success Stories*/
 
+
+.client_success_stories{
+	margin: 25px 0px 50px;
+}
+
+.client-success-card{
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+}
+
+.client-success-card .open_quote{
+	max-width: 32px;
+	position: absolute;
+	left: 20px;
+}
+
+.client-success-card .close_quote{
+	max-width: 20px;
+	display: inline-block;
+}
+.client-success-card p.review{
+	margin-top: 32px;
+}
+
+.client-success-card .testimonial_footer > .testimonials_logo{
+	display: inline-block;
+	float: left;
+	width: 30%;
+	max-width: 77px;
+}
+
+.client-success-card .five_stars{
+	width: 80px;
+	display: inline;
+	filter: brightness(1) invert(0);
+}
+
+.client-success{
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 50px;
+	list-style-type: square;
+}
+
+.client-success-card .testimonial_footer > .reviewer_name{
+	color: #a47c4c;
+	font-size: 1em;
+	display: inline-block;
+	font-weight: 400;
+}
+
+.client-success-card .testimonial_footer > .location{
+	font-style: italic;
+}
+
+.client-success-controls{
+	display: block;
+	min-height: 40px;
+	background-color: #00FF00;
+}
+
+/* Slick Slider CSS -- Client Success Stories*/
+.slick-slide{
+	transform: scale(0.8);
+	transition: all 0.4s ease-in-out;
+	padding: 40px 20px;
+	box-shadow: 0 0 5px 0px #AAA;
+}
+
+.slick-center{
+	transform: scale(1.0);
+	background-color: #a47c4c;
+	color: #fff;
+	box-shadow: 0 0 0px 0px #fff;
+}
+
+.slick-center.client-success-card .testimonial_footer > .reviewer_name{
+	color: #fff;
+}
+
+.slick-center img{
+	filter: brightness(0) invert(1);
+}
+
+
+/* How can LLF Protect My rights */
 .protect_my_rights .portrait{
 	line-height: 0%;
 	margin-top: 110px;
@@ -477,13 +577,14 @@ DESKTOP STYLES
 }
 
 .violated_rights{
-	padding-top: 50px;
+	padding-top: 100px;
 	padding-bottom: 25px;
 	background: url("images/skyline_1_20.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	margin-bottom: 25px;
+
 }
 
 .violated_rights .main_heading_alternate{
@@ -503,8 +604,15 @@ DESKTOP STYLES
 	margin-top: 25px;
 }
 
+.FAQs{
+	margin-top: 100px;
+}
+
 .choose_firm{
 	padding-bottom: 10px;
+	margin-top: 50px;
+	padding-top: 50px;
+	margin-bottom: 25px;
 }
 
 .choose_firm .main_heading_alternate{
@@ -513,7 +621,7 @@ DESKTOP STYLES
 	font-weight:400;
 	line-height:1.1;
 	margin: 0px 0px;
-	padding: 10px 15px 15px;
+	padding: 10px 15px 15px 10px;
 	background: url(images/heading_bg2.png) no-repeat bottom left;
 	background-position: 5% 100%;
 	text-align: left;
@@ -565,10 +673,6 @@ DESKTOP STYLES
 	visibility: visible;
 }
 
-/*********************
-Jeddington ^^^ 3 above
-*******************/
-
 .choose_firm .card img{
 	margin: 20px auto 10px;
 }
@@ -583,7 +687,7 @@ Jeddington ^^^ 3 above
 	margin: 5px auto 20px;
 }
 
-.row.choose_firm{
+.row.choose_firm_grid{
 	margin-top: 50px;
 }
 
@@ -594,10 +698,15 @@ Jeddington ^^^ 3 above
 
 .choose_firm .portrait{
 	max-height: 607px;
-	float: right;
-	display:block;
-	margin-bottom: 10px;
+	margin-left: 10%;
+	display: block;
 	box-shadow: 160px 160px 0px -150px #a47c4c;
+	top: 0;
+	right: 0;
+}
+
+.choose_firm_portrait_frame{
+	padding-bottom: 20px;
 }
 
 .news_insights{
@@ -607,12 +716,9 @@ Jeddington ^^^ 3 above
 Hidden Desktop tags for mobile
 *****************************/
 
-.main_heading_desktop{
-	display: block;
-	visibility: visible;
-}
 
-.main_heading_mobile{
+
+.mobile{
 	display: none;
 	visibility: hidden;
 }
@@ -806,10 +912,6 @@ MOBILE STYLES
 	.our_services {
 	  min-height: 1040px;
 }
-	.main_heading_desktop{
-		display: none;
-		visibility: hidden;
-	}
 	
 	.services_mobile > .hover_card{
 		width: 48%;
@@ -856,12 +958,8 @@ MOBILE STYLES
 		margin: 0 auto;
 	}
 	
-	.protect_my_rights .main_heading_alternate.desktop{
-		display: none;
-		visibility:hidden;
-	}
 	
-	.protect_my_rights .main_heading_alternate.mobile{
+    .main_heading_alternate.mobile{
 		display: block;
 		visibility:visible;
 		margin-left: 5%;
@@ -871,15 +969,17 @@ MOBILE STYLES
 	}
 	
 	.main_heading_alternate.desktop{
+		display: none;
+		visibility: hidden;
 	
 	}
 	
-	p.mobile{
+	p{
 		width: 80%;
 		margin: 0 auto;
 	}
 	
-	p.mobile.bottom_right_border{
+	p.bottom_right_border{
 		border-right: solid 8px #a47c4c;
 		border-bottom: solid 8px #a47c4c;
 	}
@@ -902,7 +1002,24 @@ MOBILE STYLES
 	.value_section .portrait{
 		width: 50%;
 	}
+	/*************************
+	MOBILE "SLICK SLIDER" RULES
+	*************************/
+	.client-success{
+		max-width: 60%;
+	}
 	
+	.client-success-card .open_quote{
+	max-width: 32px;
+	position: absolute;
+	left: 50px;
+	}
+	
+	.client-success .testimonial_footer .testimonials_logo{
+		margin-top: -10px;
+	}
+	
+
 } /*End Media Query for Mobile*/
 
 

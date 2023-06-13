@@ -2,13 +2,13 @@
 
 .multi_slider_container{
 	width: 100%;
-	margin: 10px auto;
-	border: 2px solid blue;
+	margin: 0px auto;
+/*	border: 2px solid blue;*/
 	overflow: hidden;
 }
 
 .multi_carousel{
-	border: 2px solid green;
+/*	border: 2px solid green;*/
 	height: 400px;
 }
 
@@ -17,10 +17,9 @@
 	width: 300%;
 	display: grid;
 	grid-template-columns: repeat(9, 1fr);
-	grid-column-gap: 5px;
+	grid-column-gap: 20px;
 	grid-row-gap: 0px;
 /*	border: 1px solid red;*/
-	transform: translate(0%);
 	
 }
 
@@ -38,9 +37,26 @@
 }
 
 .arrow.left{
-	left: 10px;
+	left: 15%;
 }
 
 .arrow.right{
-	right: 10px;
+	right: 15%;
+}
+
+.controls ul{
+	list-style-type: square;
+	position: absolute;
+	button: 20px;
+}
+
+section.auxillary{
+	height: 80%;
+	background-color: aqua;
+	margin-top: 40px;
+}
+
+section.primary{
+	height: 100%;
+	background-color: coral;
 }

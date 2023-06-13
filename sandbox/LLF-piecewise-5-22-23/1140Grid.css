@@ -90,6 +90,7 @@ img {
 
 
 /*Fix for Webkit*/
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
 .onecol , .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol,
@@ -127,7 +128,7 @@ min-height: 1px;
 .last {
 margin-right: 0px;
 }
-} /*END MEDIA QUERY*/
+} /* END MEDIA QUERY */
 
 .row::after {
   content: "";
@@ -180,15 +181,15 @@ margin: auto;
 display: block;
 }
 
-.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol
+.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol,
 .row .thirteencol, .row .fourteencol, .row .fifteencol, .row .sixteencol, .row .seventeencol, .row .eighteencol, .row .nineteencol, .row .twentycol, .row .twentyonecol, .row .twentytwocol, .row .twentythreecol, .row .twentyfourcol
 {
 width: auto;
 float: none;
 margin-left: 0px;
 margin-right: 0px;
-padding-left:8px;
-padding-right:8px;
+padding-left: 8px;
+padding-right: 8px;
 	}
 
 .last {

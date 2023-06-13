@@ -10,7 +10,7 @@ var sectionIndex = 1;
 
 
 rightArrow.addEventListener('click', function() {
-	slider.style.transform = 'translate(' + (sectionIndex) * -25 + '%)';
+	slider.style.transform = 'translate(' + (sectionIndex) * -15 + '%)';
 	sectionIndex =+ 1;
 })
 
