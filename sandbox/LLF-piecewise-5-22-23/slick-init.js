@@ -1,4 +1,4 @@
-// JavaScript Document
+//Javascript Document
 /*eslint-env es6*/
 
 $(document).ready(function(){

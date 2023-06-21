@@ -14,24 +14,28 @@
 
 .accordion .contentBx .label{
 	position:relative;
-	padding: 10px;
+	padding: 20px;
 	background: #a47c4c;
 	color: #fff;
 	cursor: pointer;
-	font-size: 1.5em;
+	font-size: 1.7em;
 }
 
 .accordion .contentBx .label::before{
-	content: '+';
+	content: "";
+	background: rgb(255,255,255) url("../resources/icons/add_icon.png") no-repeat center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
 	position: absolute;
 	top: 50%;
-	right: 20px;
+	right: 10px;
 	transform: translateY(-50%);
-	font-size: 1.5em;
 }
 
 .accordion .contentBx.active .label::before{
-	content: '-';
+	content: '';
+	background: url("../resources/icons/subtract_icon.png") no-repeat center;
 }
 
 .accordion .contentBx .content{

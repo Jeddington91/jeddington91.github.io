@@ -75,7 +75,7 @@ DESKTOP STYLES
 ********************************/
 
 #banner_main{
-	background-image: url("./images/skyline_1_20.png");
+	background-image: url("./images/pioneer_museum_1_15.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	max-height: 775px;
@@ -178,6 +178,15 @@ DESKTOP STYLES
 	margin-top:-10px;
 }
 
+.testimonial_card_mobile .testimonials_logo{
+	filter: brightness(0) invert(1);
+	display: inline-block;
+	float: left;
+	width: 30%;
+	max-width: 77px;
+	margin-top:-10px;
+}
+
 .testimonial_card .five_stars, .testimonial_card_mobile .five_stars{
 	width: 80px;
 	display: inline;
@@ -203,9 +212,10 @@ DESKTOP STYLES
 }
 
 .slider_container.headerTestimonialMobile {
+  padding-bottom: 25px;
   box-shadow: 10px 10px 0px 0px rgba(40,40,40,0.3); /* Box shadow properties */
   width: 80%;
-  height: 300px;
+  height: auto;
   background-color: rgba(40,40,40, 1);
 }
 
@@ -326,7 +336,7 @@ DESKTOP STYLES
 
 
 div.our_services {
-  background-image: url("./images/skyline_1_20.png");
+  background-image: url("./images/pioneer_museum_1_15.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 825px;
@@ -391,7 +401,7 @@ div.our_services {
 	text-align: left;
 	max-width: 85%;
 	font-size: 1.15em;
-	margin-bottom: 25px;
+	margin-bottom: 60px;
 }
 
 
@@ -409,9 +419,8 @@ div.our_services {
   justify-content: center;
   align-items: center;
   max-width: 25%;
-  margin: 10px auto;
-  margin-top: 10px;
-  padding: 8px 20px;
+  margin: 0px auto;
+  padding: 8px 16px;
   background-color: #fff;
 }
 
@@ -425,7 +434,7 @@ div.our_services {
 	padding: 50px 0px;
 }
 
-.value_section .portrait, .violated_rights .portrait{
+.value_section .portrait, .violated_rights .portrait, .need_to_hire .portrait{
 	width: 100%;
 	margin-top: 10px;
 	box-shadow: -110px -110px 0px -100px #a47c4c;
@@ -579,7 +588,7 @@ div.our_services {
 .violated_rights{
 	padding-top: 100px;
 	padding-bottom: 25px;
-	background: url("images/skyline_1_20.png");
+	background: url("images/skyline_1_20.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -587,8 +596,8 @@ div.our_services {
 
 }
 
-.violated_rights .main_heading_alternate{
-	font-size:2.1em;
+.violated_rights .main_heading_alternate, .need_to_hire .main_heading_alternate{
+	font-size: 2.8em;
 	font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
 	font-weight:400;
 	line-height:1.1;
@@ -598,7 +607,7 @@ div.our_services {
 	text-align: left;
 }
 
-.violated_rights p{
+.violated_rights p, .need_to_hire p{
 	padding-right: 20px;
 	font-family: 'Poppins', Helvetica, Arial, sans-serif;
 	margin-top: 25px;
@@ -616,7 +625,7 @@ div.our_services {
 }
 
 .choose_firm .main_heading_alternate{
-	font-size:2.1em;
+	font-size:2.8em;
 	font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
 	font-weight:400;
 	line-height:1.1;
@@ -712,6 +721,143 @@ div.our_services {
 .news_insights{
 	margin-top: 50px;
 }
+
+.need_to_hire{
+	margin: 25px 0px;
+	padding: 25px 0px;
+}
+
+.consultation{
+	margin-bottom: -320px;
+}
+
+.consult_form{
+	box-shadow: 0 0 5px 0px #AAA; 
+	background-color: #fff;
+	padding: 10px 25px;
+	margin: 25px;
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+}
+
+.consult_form .main_heading{
+	font-size: 2.5em;
+	margin: 10px 0px 45px;
+}
+
+.consult_form form{
+	color: #a47c4c;
+}
+
+.consult_form input{
+	width: 95%;
+	border: none;
+	border-bottom: 1px solid #a47c4c;
+}
+
+.consult_form input:focus{
+	outline: none;
+	border-bottom: 1px solid #a47c4c;
+}
+
+.consult_form textarea:focus{
+	outline: none;
+}
+
+.consult_form textarea{
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	color: #a47c4c;
+	width:100%; 
+	height:100px;
+	margin-top: 20px;
+	border: none;
+	border-bottom: 1px solid #a47c4c;
+}
+
+.consult_submit input{
+	border: none;
+	display: block;
+	background-color:#eab819;
+	color:#fff;
+	margin: 25px auto;
+	padding: 8px;
+	width: 100%;
+	text-align:center;
+	text-decoration:none;
+	font-size: 1.4em;
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	font-weight:500;
+	transition: all 0.3s ease;
+}
+
+.consult_submit input:hover{
+	background-color: #c3251d;
+	transition: all 0.3s ease;
+	
+}
+
+.full_footer{
+	background: url("images/skyline_1_black.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	max-height: 725px;
+	padding-bottom: 25px;
+	padding-top: 340px;
+}
+
+#footer_logo_img{
+	margin: 0px auto 25px;
+}
+
+.full_footer h4{
+	font-size: 1.6em;
+	color: #a47c4c;
+	font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
+	padding: 10px 0px;
+	margin-bottom: 25px;
+	background: url(images/heading_bg2.png) no-repeat bottom left;
+	background-position: 0% 100%;
+}
+
+.full_footer p{
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	color: #fff;
+	padding: 8px;
+	
+}
+.full_footer a{
+	text-decoration: none;
+}
+
+img.footer_icon_map{
+	display: block;
+	float: left;
+	padding: 16px 16px 0px 0px;
+	max-width: 32px;
+	max-height: 32px;
+}
+
+img.footer_icon{
+	display: block;
+	float: left;
+	vertical-align: middle;
+	padding: 0px 16px 0px 0px;
+	max-width: 32px;
+	max-height: 32px;
+}
+
+footer{
+	padding: 20px;
+	text-align: center;
+	font-family: Helvetica,Arial,sans-serif;
+	background-color: #a47c4c;
+	color: white;
+}
+
+footer > a, footer a:hover{
+	cursor:pointer;
+}
+
 /*****************************
 Hidden Desktop tags for mobile
 *****************************/

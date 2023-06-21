@@ -204,8 +204,8 @@
 									<div class="testimonial_card_mobile">
 										<img src="resources/icons/open_quote.png" alt="open quote" class="open_quote">
 										<p>Austin was amazing!! He was diligent, professional and highly qualified. His dedication in dealing with my case resulted in a dismissal of the charges. I highly recommend Austin for you (...) <img src="resources/icons/close_quote.png" alt="close quote" class="close_quote"></p>
-										<div class="testimonial_footer">
-											<img src="resources/icons/LLF_Logo_75x75.png" alt="Lux Law Firm Logo" class="testimonials_logo">
+										<div class="testimonial_footer row">
+											<img src="resources/icons/LLF_Logo_75x75.png" alt="Lux Law Firm Logo" class="testimonials_logo ">
 											<p class="reviewer_name">Justin L.</p>
 											<p class="location">Colorado Springs, CO</p>
 											<img src="resources/icons/five_stars_stroked.png" alt="5 stars" class="five_stars">
@@ -719,8 +719,102 @@
 		</div>
 	</div>
 	
+	<div class="need_to_hire">
+		<div class="row">
+			<div class="onecol"></div>
+			<div class="tencol"><img src="images/lux_portrait5.jpg" alt="Austin Lux Portrait" class="portrait"></div>
+			<div class="onecol"></div>
+			<div class="elevencol"><h2 class="main_heading_alternate desktop">Do I Need to Hire a Criminal Defense Lawyer?</h2>
+				<p>It would be fantastic if the criminal justice system were built to be accessible to everyday Americans facing criminal charges. Instead, it is a huge and complicated bureaucracy with all kinds of obstacles for anyone without the years of education and experience that a law degree requires. Trying to learn everything you would need to know to defend yourself in a criminal trial while simultaneously dealing with the disruption to your life and emotions that an arrest can cause would be incredibly difficult, if not impossible. Luckily, the skilled and experienced criminal defense lawyers at The Lux Law Firm are ready to help you navigate the courts and get you to the best possible outcome for your case. We would love to talk to you about what we can do to protect your rights and get justice in your case. WE provide a free consultation so that you can get your questions answered.</p>
+				
+				<p>Our Colorado Springs office is located 7 miles from Cheyenne Mountain State Park and a mere 3 minutes from the U.S. Olympic &amp; Paralympic Museum. The closest airport, Colorado Springs Airport (COS), is just 12 miles away. Call The Lux Law Firm today at 719-451-7469 to get the professional and experienced help you need to protect your future.</p>
+			</div>
+			<div class="onecol last"></div>
+		</div>
+	</div>
 	
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<div class="consultation">
+		<div class="row">
+			<div class="threecol"></div>
+			<div class="eighteencol">
+				<div class="consult_form">
+					<h2 class="main_heading">
+						Free In-Depth <br /> No Obligation Case Evaluation
+					</h2>
+					<form action="mail.php" method="post">
+						<div class="row">
+							<div class="twelvecol">
+								<label for="fname">First Name:</label><br />
+								<input type="text" id="fname" name="fname" value="">
+							</div>
+							<div class="twelvecol last">
+								<label for="lname">Last Name:</label><br />
+								<input type="text" id="lname" name="lname" value="">
+							</div>
+						</div>
+						<br />
+						<div class="row">
+							<div class="twelvecol">
+								<label for="email">Email:</label><br />
+								<input type="email" id="email" name="email" value="">
+							</div>
+							<div class="twelvecol last">
+								<label for="phone">Phone Number:</label><br />
+								<input type="tel" id="phone" name="phone" value="">
+							</div>
+						</div>
+						<div class="row">
+							<div class="twentyfourcol last">
+								<textarea name="case_details" placeholder="Case Details (case number, charges, etc.)"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="sevencol"></div>
+							<div class="tencol consult_submit">
+								<label for="submit"><input type="submit" value="GET STARTED!"></label>
+							</div>
+							<div class="sevencol last"></div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="threecol last"></div>
+		</div>
+	</div>
+	<div class="full_footer">
+		<div class="row">
+			<div class="sixcol"></div>
+			<div class="twelvecol">
+				<img src="images/LLF_logo_text_banner.png" alt="The Lux Law Firm, PLLC" id="footer_logo_img">
+			</div>
+			<div class="sixcol last"></div>
+		</div>
+		<div class="row">
+			<div class="threecol"></div>
+				<div class="eighteencol">
+					<div class = "tencol">
+						<h4>The Lux Law Firm, PLLC</h4>
+						<a href="https://g.page/coloradodefenseattorney?share" target="_blank" rel="noopener">
+							<img src="resources/icons/map_pin_brown.png" alt="Address" class="footer_icon_map"><p>128 S Tejon St Suite 202 <br />Colorado Springs, CO 80903</p></a>
+						<a href="tel:+17194517469">
+							<img src="resources/icons/phone_icon_90_brown.png" alt="Phone" class="footer_icon"><p>719-451-7469</p></a>
+						<a href="mailto:austinlux@theluxlawfirm.com">
+							<img src="resources/icons/mail_icon_brown.png" alt="Email" class="footer_icon"><p>austinlux@theluxlawfirm.com</p></a>
+					</div>
+					<div class = "fourteencol">
+					
+					</div>
+				</div>
+			<div class="threecol last"></div>
+		</div>
+	</div>
+	
+	
+  <footer>
+	  <p>©2023 The Lux Law Firm, PLLC. All Rights Reserved |<a src="#"> Terms of Service </a>|<a src="#"> Sitemap </a>|<a src="#"> Privacy Policy </a></p>
+	  
+	
+  </footer>
 
 </main>
 	
@@ -736,53 +830,7 @@
 
 <!-- js initializers/ other minor code-->
 <script type="text/javascript" src="slick-init.js"></script>
-<script>
-	//Drop down menu function
-	const menuIcon = document.getElementById('menu_selector');
-	const menu = document.querySelector('.menu');
-
-	menuIcon.addEventListener('click', () => {
-	  menu.classList.toggle('show');
-	});
-
-	const servicesItem = document.querySelector('.menu > .list > li:nth-child(3)');
-	const submenu = servicesItem.querySelector('.submenu');
-
-	servicesItem.addEventListener('click', () => {
-	  submenu.classList.toggle('show');
-	});
-
-	//Accordion initializers
-	const initializeAccordions = (container) => {
-		const accordions = container.querySelectorAll('.accordion');
-			accordions.forEach((accordionElement) => {
-			  new Accordion(accordionElement);
-			  const nestedAccordions = accordionElement.querySelectorAll('.accordion');
-			  nestedAccordions.forEach((nestedAccordionElement) => {
-				initializeAccordions(nestedAccordionElement);
-			  });
-			});
-		  };
-	const mainAccordion = document.querySelector('.accordion');
-	initializeAccordions(mainAccordion);
-
-	const accordionElement = document.querySelector('.accordion');
-	const accordionInstance = new Accordion(accordionElement);
-	
-	
-	//Slider initializers
-	const headerTestimonialSlider = new Slider('.slider_container.headerTestimonial .slider', '.slider_container.headerTestimonial .controls');
-   	headerTestimonialSlider.init();
-	
-	const headerTestimonialMobileSlider = new Slider('.slider_container.headerTestimonialMobile .slider', '.slider_container.headerTestimonialMobile .controls');
-   	headerTestimonialMobileSlider.init();
-	
-	const clientStoriesSlider = new MultiSlider('.slider_container.clientStories .slider', '.slider_container.clientStories .controls', 3, 2, 95);
-	
-	
-	
-</script>
-
+<script type="text/javascript" src ="init.js"></script>
 </body>
 
 </html>
