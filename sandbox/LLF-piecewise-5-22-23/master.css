@@ -1012,7 +1012,11 @@ MOBILE STYLES
 
 }
 
-
+		p.location{
+			text-align: left;
+			display: inline-block;
+}
+	
 	.testimonial_card_mobile .five_stars_mobile{
 		width: 80px;
 		display: inline;
