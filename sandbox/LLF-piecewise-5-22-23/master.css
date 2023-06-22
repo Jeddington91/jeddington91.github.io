@@ -818,21 +818,49 @@ div.our_services {
 	background: url(images/heading_bg2.png) no-repeat bottom left;
 	background-position: 0% 100%;
 }
+.social_media{
+	text-align: center;
+}
+
+.social_media h4{
+	margin: 25px 0px 0px;
+	font-size: 1.6em;
+	text-align: center;
+	color: #a47c4c;
+	font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
+	padding: 10px 0px;
+	background: none;
+}
+
+.social_media img{
+	max-height: 36px;
+	
+}
 
 .full_footer p{
 	font-family: 'Poppins', Helvetica, Arial, sans-serif;
 	color: #fff;
 	padding: 8px;
-	
 }
 .full_footer a{
 	text-decoration: none;
 }
 
+
+
+.footer_image_frame{
+	padding: 0px 8px 8px 0px;
+}
+
+.footer_image_frame > img{
+	box-shadow: 7px 7px 0px 0px rgba(164, 124, 76, 1); /* Box shadow properties */
+	
+}
+
 img.footer_icon_map{
 	display: block;
 	float: left;
-	padding: 16px 16px 0px 0px;
+	padding: 12px 16px 0px 0px;
 	max-width: 32px;
 	max-height: 32px;
 }
