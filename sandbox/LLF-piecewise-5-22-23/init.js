@@ -15,6 +15,7 @@
 	servicesItem.addEventListener('click', () => {
 		submenu.classList.toggle('show');
 	});
+ 
 
 	//Accordion initializers
 	const initializeAccordions = (container) => {
