@@ -945,6 +945,10 @@ MOBILE STYLES
 		margin: 5px;
 	}
 	*/
+	.row.desktop{
+		display:none;
+		visibility: hidden;
+	}
 
 	/*Hidden Option*/
 	#banner_main_container{
@@ -1076,7 +1080,7 @@ MOBILE STYLES
 		margin: 0 auto 25px;
 	}
 	
-	/*Start Our Services Stylings Mobile*/
+	/*Our Services Stylings Mobile*/
 	
 	
 	.services_desktop{
@@ -1119,8 +1123,8 @@ MOBILE STYLES
 	  overflow:hidden;
 	  margin-bottom: 10px;
 }
-
-	.main_heading_mobile{
+/* For centered mobile headings */
+	.main_heading.mobile{
 		display: block;
 		visibility: visible;
 		text-align: center;
@@ -1137,10 +1141,10 @@ MOBILE STYLES
 		visibility:visible;
 		box-shadow: -110px -110px 0px -100px #a47c4c;
 		width: 80%;
-		margin: 0 auto;
+		margin: 10px auto;
 	}
 	
-	
+/*For alternate mobile headings */
     .main_heading_alternate.mobile{
 		display: block;
 		visibility:visible;
@@ -1201,8 +1205,29 @@ MOBILE STYLES
 		margin-top: -10px;
 	}
 	
-
+	/* Protect My Rights */
 	
+	/* Our Results*/
+	.row.mobile{
+		display: block;
+		visibility:visible;
+	}
+	
+	.our_results_mobile{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+	
+	.our_results_mobile > .div1 { grid-area: 1 / 1 / 2 / 2; }
+	.our_results_mobile > .div2 { grid-area: 1 / 2 / 2 / 3; }
+	.our_results_mobile > .div3 { grid-area: 2 / 1 / 3 / 2; }
+	.our_results_mobile > .div4 { grid-area: 2 / 2 / 3 / 3; }
+	
+	
+	/*Footer Consultation Form*/
 	.consult_form{
 		position: sticky;
 		z-index: 0;

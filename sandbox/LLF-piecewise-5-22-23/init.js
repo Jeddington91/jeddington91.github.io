@@ -42,5 +42,8 @@
    	headerTestimonialMobileSlider.init();
 	
 	const clientStoriesSlider = new MultiSlider('.slider_container.clientStories .slider', '.slider_container.clientStories .controls', 3, 2, 95);
+
+	const ourResultsMobileSlider = new Slider('.slider_container.ourResultsMobile .slider', '.slider_container.ourResultsMobile .controls');
+	ourResultsMobileSlider.init();
 	
 
