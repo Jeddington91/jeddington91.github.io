@@ -19,14 +19,14 @@ Frank Ruhl Libre: font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif
 
 
 
-img#menu_selector{
+img#menu_selector, img#menu_selector_mobile{
   cursor: pointer;
 }
 /*****************
 DROP DOWN MENU
 *****************/
 
-.menu {
+.menu{
   max-height: 0;
   overflow: hidden;
   position: absolute;
@@ -36,38 +36,55 @@ DROP DOWN MENU
   width: 428.5px;
 }
 
-@media (max-width: 1140px){
-	.menu{
-		width: inherit;
-	}
+.menu_mobile{
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 999;
+  transition: max-height 0.3s ease;
+  margin-top: 140px;
+  right: 0;
 }
 
-.menu.show {
+@media (max-width: 1140px){
+	.menu,
+	.menu_mobile{
+		width: inherit;
+	}
+	
+}
+
+/*JS Dependent Menu Styles */ 
+.menu.show, 
+.menu_mobile.show{
   max-height: 706px; /* Adjust the value as needed */
 }
 
-.submenu {
+.servicesSubmenu,
+.teamSubmenu {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
 
-.submenu.show {
+.servicesSubmenu.show,
+.teamSubmenu.show {
   max-height: 424px; /* Adjust the value as needed */
 }
 
-.menu > .list li{
-	background-color: #fff;
-	color: #000;
-	font-family: 'Poppins', Helvetica, Arial, sans-serif;
-	border-bottom: solid 1px #000;
-	padding: 5px 0px 5px 10px;
-	
+.menu > .list li,
+.menu_mobile > .list li{
+  background-color: #fff;
+  color: #000;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  border-bottom: solid 1px #000;
+  padding: 5px 0px 5px 10px;
 }
 
-.menu > .list > li.has_submenu > ul > li{
-	border-top: solid 1px #000;
-	border-bottom: none;
+.menu > .list > li.has_submenu > ul > li,
+.menu_mobile > .list > li.has_submenu > ul > li{
+  border-top: solid 1px #000;
+  border-bottom: none;
 }
 
 /********************************
@@ -555,6 +572,10 @@ div.our_services {
 	font-family: 'Poppins', Helvetica, Arial, sans-serif;
 }
 
+.slider_container.ourResultsMobile{
+	height:300px;
+}
+
 .results_card.top_border{
 	border-top: 1px solid #fff;
 	padding-top: 20px;
@@ -583,6 +604,32 @@ div.our_services {
 .results_text{
 	font-size: 0.8em;
 }
+/************************************
+Mobile Slider Results Card Formatting
+*************************************/
+
+
+@media handheld, only screen and (max-width: 860px){
+	
+	.main_introduction{
+		margin-top: 0px;
+	}
+	.results_card .title{
+		font-size: 2em;
+		padding: 10px;
+	}
+	
+	.results_card .outcome{
+		font-size: 2em;
+		padding: 10px;
+		margin-bottom:10px;
+	}
+	
+	.results_text{
+		font-size: 1.2em;
+	}
+	
+}
 
 .violated_rights{
 	padding-top: 100px;
@@ -607,6 +654,18 @@ div.our_services {
 	padding-left: 10px;
 }
 
+.violated_rights .main_heading_alternate.mobile{
+	margin-bottom:30px;
+}
+
+.need_to_hire .main_heading_alternate.mobile{
+	margin-bottom:30px;
+}
+
+.violated_rights .portrait{
+	width: 75%;
+}
+
 .violated_rights p, .need_to_hire p{
 	padding-right: 20px;
 	font-family: 'Poppins', Helvetica, Arial, sans-serif;
@@ -619,8 +678,6 @@ div.our_services {
 
 .choose_firm{
 	padding-bottom: 10px;
-	margin-top: 50px;
-	padding-top: 50px;
 	margin-bottom: 25px;
 }
 
@@ -834,7 +891,6 @@ div.our_services {
 
 .social_media img{
 	max-height: 36px;
-	
 }
 
 .full_footer p{
@@ -1013,7 +1069,7 @@ MOBILE STYLES
 	  max-height: 120px;
 	}
 	#TL_logo_mobile{margin: 5% 0% 5% 15%;}
-	#menu_icon_mobile{margin: 8% 0% 5% 50%;}
+	#menu_selector_mobile{margin: 8% 0% 5% 50%;}
 
 	/*Slogan Text Styles*/
 
@@ -1144,6 +1200,11 @@ MOBILE STYLES
 		margin: 10px auto;
 	}
 	
+	.row.cf_grid{
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	
 /*For alternate mobile headings */
     .main_heading_alternate.mobile{
 		display: block;
@@ -1188,6 +1249,17 @@ MOBILE STYLES
 	.value_section .portrait{
 		width: 50%;
 	}
+	
+	.choose_firm .portrait{
+	max-width: 80%;
+	margin: 20px auto;
+	display: block;
+	box-shadow: 160px 160px 0px -150px #a47c4c;
+	}
+	
+	.need_to_hire .portrait{
+	max-width: 80%;
+	}
 	/*************************
 	MOBILE "SLICK SLIDER" RULES
 	*************************/
@@ -1231,6 +1303,10 @@ MOBILE STYLES
 	.consult_form{
 		position: sticky;
 		z-index: 0;
+	}
+	
+	.social_media img{
+	display: inline;
 	}
 } /*End Media Query for Mobile*/
 

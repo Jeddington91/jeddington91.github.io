@@ -9,13 +9,43 @@
 		menu.classList.toggle('show');
 	});
 
-	const servicesItem = document.querySelector('.menu > .list > li:nth-child(3)');
-	const submenu = servicesItem.querySelector('.submenu');
+	const teamClick = document.querySelector('.has_submenu.team');
+	const servicesClick = document.querySelector('.has_submenu.services');
 
-	servicesItem.addEventListener('click', () => {
-		submenu.classList.toggle('show');
+	const servicesSubmenu = servicesClick.querySelector('.servicesSubmenu');
+	const teamSubmenu = teamClick.querySelector('.teamSubmenu');
+
+	servicesClick.addEventListener('click', () => {
+		servicesSubmenu.classList.toggle('show');
 	});
- 
+
+	teamClick.addEventListener('click', () => {
+		teamSubmenu.classList.toggle('show');
+	});
+
+	//Drop down mobile menu
+	const menuIconMobile = document.getElementById('menu_selector_mobile');
+	const menuMobile = document.querySelector('.menu_mobile');
+
+	menuIconMobile.addEventListener('click', () => {
+		menuMobile.classList.toggle('show');
+
+		// Submenu toggle
+		const teamClickMobile = document.querySelector('.menu_mobile .has_submenu.team');
+		const servicesClickMobile = document.querySelector('.menu_mobile .has_submenu.services');
+
+		const teamSubmenuMobile = teamClickMobile.querySelector('.teamSubmenu');
+		const servicesSubmenuMobile = servicesClickMobile.querySelector('.servicesSubmenu');
+
+
+		servicesClickMobile.addEventListener('click', () => {
+			servicesSubmenuMobile.classList.toggle('show');
+		});
+
+		teamClickMobile.addEventListener('click', () => {
+			teamSubmenuMobile.classList.toggle('show');
+		});
+	});
 
 	//Accordion initializers
 	const initializeAccordions = (container) => {
@@ -34,6 +64,17 @@
 	const accordionElement = document.querySelector('.accordion');
 	const accordionInstance = new Accordion(accordionElement);
 	
+
+	//Google Maps script -* Update here once Google API key available, see dimensions to site
+//		document.getElementById('footer_image').addEventListener('click', function() {
+//		  var mapFrame = document.createElement('iframe');
+//		  mapFrame.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dYOUR_PLACE_ID!2dLONGITUDE!2dLATITUDE!3s0x0:0x0!5m1!1e1');
+//		  mapFrame.setAttribute('width', '600');
+//		  mapFrame.setAttribute('height', '450');
+//		  mapFrame.setAttribute('frameborder', '0');
+//		  mapFrame.setAttribute('style', 'border:0;');
+//		  this.parentNode.replaceChild(mapFrame, this);
+//		});
 	
 	//Slider initializers
 	const headerTestimonialSlider = new Slider('.slider_container.headerTestimonial .slider', '.slider_container.headerTestimonial .controls');
@@ -42,7 +83,7 @@
 	const headerTestimonialMobileSlider = new Slider('.slider_container.headerTestimonialMobile .slider', '.slider_container.headerTestimonialMobile .controls');
    	headerTestimonialMobileSlider.init();
 	
-	const clientStoriesSlider = new MultiSlider('.slider_container.clientStories .slider', '.slider_container.clientStories .controls', 3, 2, 95);
+//	const clientStoriesSlider = new MultiSlider('.slider_container.clientStories .slider', '.slider_container.clientStories .controls', 3, 2, 95); //Using slick temporarily
 
 	const ourResultsMobileSlider = new Slider('.slider_container.ourResultsMobile .slider', '.slider_container.ourResultsMobile .controls');
 	ourResultsMobileSlider.init();
