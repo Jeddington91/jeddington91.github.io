@@ -87,6 +87,14 @@ DROP DOWN MENU
   border-bottom: none;
 }
 
+.dropdown_indicator{
+  content: ''; /* Unicode character for a down-pointing triangle */
+  background: rgb(0,0,0) url("../resources/icons/arrow_dropdown_white.png") no-repeat center;
+  position: absolute;
+  width: 20px;
+  right: 10px;
+}
+
 /********************************
 DESKTOP STYLES
 ********************************/
@@ -712,6 +720,7 @@ Mobile Slider Results Card Formatting
 	margin: 5px;
 	padding: 5px;
 	display: inline-block;
+	display: inline-block;
 }
 
 .choose_firm .card:hover{
@@ -1044,6 +1053,10 @@ MOBILE STYLES
 			.card3{grid-area: c;}
 			.card4{grid-area: d;}
 
+	.dropdown_indicator{
+		position: absolute;
+		margin-top: -22px;
+	}
 	.call_now, .email_now{
 		color: white;
 		font-weight: 700;
