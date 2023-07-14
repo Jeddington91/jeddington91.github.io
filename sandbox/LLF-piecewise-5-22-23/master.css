@@ -670,9 +670,7 @@ Mobile Slider Results Card Formatting
 	margin-bottom:30px;
 }
 
-.violated_rights .portrait{
-	width: 75%;
-}
+
 
 .violated_rights p, .need_to_hire p{
 	padding-right: 20px;
@@ -1269,6 +1267,10 @@ MOBILE STYLES
 	display: block;
 	box-shadow: 160px 160px 0px -150px #a47c4c;
 	}
+	
+	.violated_rights .portrait{
+	width: 75%;
+}
 	
 	.need_to_hire .portrait{
 	max-width: 80%;
