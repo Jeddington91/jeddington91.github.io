@@ -720,7 +720,6 @@ Mobile Slider Results Card Formatting
 	margin: 5px;
 	padding: 5px;
 	display: inline-block;
-	display: inline-block;
 }
 
 .choose_firm .card:hover{
@@ -786,6 +785,67 @@ Mobile Slider Results Card Formatting
 
 .news_insights{
 	margin-top: 50px;
+}
+
+.news_preview_container{
+	margin-top: 15px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 0px;
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	padding: 5px;
+}
+
+.news_preview_container > section{
+	position: relative;
+	box-shadow: 0 0 6px 0px #AAA; 
+	margin-bottom: 15px;
+}
+
+.news_div{
+	padding: 5px;
+}
+
+.news_preview_container .news_title{
+	font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
+	margin: 0px 0px 15px;
+}
+
+.news_preview_container > section > .news_image{
+	margin: 0px 0px 15px;
+	display: block;
+}
+
+.news_preview_container > section .news_date{
+	color: #a47c4c;
+	margin: 0px 0px 15px;
+}
+
+.news_preview_container > section .news_description{
+	font-size: 0.9em;
+	margin: 0px 0px 50px;
+}
+
+
+.news_preview_container > section  .readmore_link{
+	padding: 5px 15px;
+	background-color: #a47c4c;
+	color: #fff;
+	text-align: left;
+}
+
+
+
+.news_preview_container > section  .readmore_button{
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	background-color: #a47c4c;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
 .need_to_hire{
