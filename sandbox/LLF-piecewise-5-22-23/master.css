@@ -18,7 +18,6 @@ Frank Ruhl Libre: font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif
 
 
 
-
 img#menu_selector, img#menu_selector_mobile{
   cursor: pointer;
 }
@@ -645,7 +644,7 @@ Mobile Slider Results Card Formatting
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	margin-bottom: 25px;
+	margin-bottom: 50px;
 
 }
 
@@ -1026,6 +1025,17 @@ MOBILE STYLES
 	#banner_main{
 		max-height: 950px;
 		padding-bottom: 40px;
+		margin-bottom: 10px;
+	}
+	@media handheld, only screen and (max-width: 400px){
+		#banner_main{
+			max-height:1150px;
+		}
+		@media handheld, only screen and (max-width: 389px){
+			body{
+			min-width: 390px;
+			}
+		}
 	}
 	#banner_main_container_mobile div{
 		display: grid;
@@ -1263,6 +1273,10 @@ MOBILE STYLES
     border: solid 10px #fff;
 }
 */
+	.value_section{
+		margin-bottom: 10px;
+		padding-bottom:10px;
+	}
 	
 	.violated_rights{
 		padding: 25px 0px;
@@ -1271,6 +1285,11 @@ MOBILE STYLES
 	.FAQs{
 		margin-top: 25px;
 	}
+	
+	.news_insights{
+		margin-top:10px;
+	}
+	
 	/**************************
 	Mobile Portrait Stylings
 	**************************/
