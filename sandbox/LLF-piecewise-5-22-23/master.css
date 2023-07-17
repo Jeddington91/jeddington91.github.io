@@ -676,6 +676,10 @@ Mobile Slider Results Card Formatting
 	margin-top: 25px;
 }
 
+.violated_rights p{
+	padding-left: 15px;
+}
+
 .FAQs{
 	margin-top: 100px;
 }
