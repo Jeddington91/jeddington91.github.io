@@ -442,7 +442,7 @@ div.our_services {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 25%;
+  max-width: 50%;
   margin: 0px auto;
   padding: 8px 16px;
   background-color: #fff;
@@ -1067,7 +1067,6 @@ MOBILE STYLES
 	.call_now, .email_now{
 		color: white;
 		font-weight: 700;
-
 		justify-content:center;
 		padding: 15px 0px;
 		margin-top: 15px;
@@ -1207,6 +1206,27 @@ MOBILE STYLES
 	}
 	p.card_description{
 		font-size: 1em;
+	}
+	@media handheld, only screen and (max-width: 685px){
+		p.card_description{
+			font-size: 0.8em;
+		}
+		.card_content p{
+			margin-bottom: 10px;
+		}
+		
+/*
+		@media handheld, only screen and (max-width: 582px){
+			.readmore_button{
+				display: none;
+				visibility: hidden;
+			}
+			
+			p.card_description{
+				font-size: 1em;
+			}
+		}
+*/
 	}
 	
 /* For centered mobile headings */
