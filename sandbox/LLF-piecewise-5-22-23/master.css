@@ -279,8 +279,8 @@ DESKTOP STYLES
 /* Main Styles */
 
 .main_introduction{
-	padding: 25px 0px;
-	margin: 50px 0px;
+	padding: 10px 0px;
+	margin: 15px 0px;
 }
 
 .main_heading{
@@ -365,7 +365,7 @@ div.our_services {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 825px;
-  padding: 75px 0px;
+  padding: 20px 0px 75px;
   margin: 25px 0px;
 }
 
@@ -640,8 +640,7 @@ Mobile Slider Results Card Formatting
 }
 
 .violated_rights{
-	padding-top: 100px;
-	padding-bottom: 25px;
+	padding: 100px 0px 25px;
 	background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0)), url("images/pioneer_museum_1_15.jpg"); /*jeddington possibly need new bg img, add temp gradient for text readability*/
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1145,6 +1144,7 @@ MOBILE STYLES
 		box-shadow: -10px 10px 0px 0px #a47c4c;
 		display:block!important;
 		margin: 0 auto 25px;
+		max-width: 680px;
 	}
 	
 	/*Our Services Stylings Mobile*/
@@ -1164,7 +1164,8 @@ MOBILE STYLES
 	
 	.our_services {
 	  min-height: 1040px;
-}
+	  
+	}
 	
 	.services_mobile > .hover_card{
 		width: 48%;
@@ -1174,12 +1175,16 @@ MOBILE STYLES
 	.hover_card.drug_crimes, .hover_card.dui_defense, .hover_card.felony_defense, .hover_card.domestic_violence, .hover_card.marijuana, .hover_card.expungement{
 		height: 300px;
 	}
-	.hover_card.domestic_violence, .hover_card.marijuana, .hover_card.expungement{
+	.hover_card.domestic_violence, 
+	.hover_card.marijuana, 
+	.hover_card.expungement{
 		float: left;
 		display: inline;
 		margin-left:1%;
 	}
-	.hover_card.drug_crimes, .hover_card.dui_defense, .hover_card.felony_defense{
+	.hover_card.drug_crimes, 
+	.hover_card.dui_defense, 
+	.hover_card.felony_defense{
 		float: right;
 		display: inline;
 		margin-right:2%;
@@ -1189,7 +1194,11 @@ MOBILE STYLES
 	  display: inline;
 	  overflow:hidden;
 	  margin-bottom: 10px;
-}
+	}
+	p.card_description{
+		font-size: 1em;
+	}
+	
 /* For centered mobile headings */
 	.main_heading.mobile{
 		display: block;
@@ -1202,6 +1211,7 @@ MOBILE STYLES
 		display: none;
 		visibility: hidden;
 	}
+	
 	
 	.protect_my_rights .portrait_mobile{
 		display: block;
@@ -1253,6 +1263,14 @@ MOBILE STYLES
     border: solid 10px #fff;
 }
 */
+	
+	.violated_rights{
+		padding: 25px 0px;
+	}
+	
+	.FAQs{
+		margin-top: 25px;
+	}
 	/**************************
 	Mobile Portrait Stylings
 	**************************/
