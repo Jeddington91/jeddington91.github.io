@@ -99,7 +99,7 @@ DESKTOP STYLES
 ********************************/
 
 #banner_main{
-	background-image: url("./images/pioneer_museum_1_15.jpg");
+	background-image: url("./images/pioneer_museum_2_20.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	max-height: 775px;
@@ -561,7 +561,7 @@ div.our_services {
 }
 
 .results_section{
-	background: url("images/skyline_1_black.png");
+	background: url("images/springs_office_nw_black.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -848,6 +848,42 @@ Mobile Slider Results Card Formatting
 	right: 0;
 }
 
+@media handheld, only screen and (max-width: 860px){
+	#news_3{
+		display: none;
+		visibility: hidden;
+	}
+	
+	.news_preview_container{
+	margin-top: 15px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 0px;
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	padding: 5px;
+}
+}
+
+@media handheld, only screen and (max-width: 500px){
+	#news_2{
+		display: none;
+		visibility: hidden;
+	}
+	
+	.news_preview_container{
+	margin-top: 15px;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 0px;
+	font-family: 'Poppins', Helvetica, Arial, sans-serif;
+	padding: 5px;
+}
+}
+
 .need_to_hire{
 	margin: 25px 0px;
 	padding: 25px 0px;
@@ -922,7 +958,7 @@ Mobile Slider Results Card Formatting
 }
 
 .full_footer{
-	background: url("images/skyline_1_black.png");
+	background: url("images/springs_office_nw_black.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -1095,12 +1131,13 @@ MOBILE STYLES
 		#banner_main{
 			max-height:1150px;
 		}
-		@media handheld, only screen and (max-width: 389px){
+	}
+	
+	@media handheld, only screen and (max-width: 389px){
 			body{
 			min-width: 390px;
 			}
 		}
-	}
 	#banner_main_container_mobile div{
 		display: grid;
 	}
