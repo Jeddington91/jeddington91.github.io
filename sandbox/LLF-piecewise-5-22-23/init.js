@@ -63,6 +63,18 @@
 
 	const accordionElement = document.querySelector('.accordion');
 	const accordionInstance = new Accordion(accordionElement);
+
+	function loadGoogleMap() {
+		var mapContainer = document.getElementById('map_container');
+		var iframe = document.createElement('iframe');
+		iframe.src = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12432.191883948808!2d-104.8241523!3d38.8313622!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8713452b8791e0ed%3A0x1c73286afca53d36!2sThe%20Lux%20Law%20Firm%2C%20PLLC!5e0!3m2!1sen!2sus!4v1689787170277!5m2!1sen!2sus';
+		iframe.width = '100%'; // Set the desired width of the map
+		iframe.height = '240';
+		iframe.frameborder = '0';
+		iframe.style.border = '0';
+		mapContainer.innerHTML = ''; // Remove the image
+		mapContainer.appendChild(iframe); // Add the iframe
+}
 	
 
 	//Google Maps script -* Update here once Google API key available, see dimensions to site

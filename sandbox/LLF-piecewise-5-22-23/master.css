@@ -808,6 +808,10 @@ Mobile Slider Results Card Formatting
 	padding: 5px;
 }
 
+.news_div span.author{
+	float: right;
+}
+
 .news_preview_container .news_title{
 	font-family: 'Frank Ruhl Libre', Times, Times New Roman, serif;
 	margin: 0px 0px 15px;
@@ -866,19 +870,14 @@ Mobile Slider Results Card Formatting
 }
 }
 
-@media handheld, only screen and (max-width: 500px){
-	#news_2{
-		display: none;
-		visibility: hidden;
-	}
-	
+@media handheld, only screen and (max-width: 510px){	
 	.news_preview_container{
 	margin-top: 15px;
 	display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	grid-template-rows: 1fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 0px;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 5px;
 	font-family: 'Poppins', Helvetica, Arial, sans-serif;
 	padding: 5px;
 }
@@ -1016,6 +1015,10 @@ Mobile Slider Results Card Formatting
 .footer_image_frame > img{
 	box-shadow: 7px 7px 0px 0px rgba(164, 124, 76, 1); /* Box shadow properties */
 	
+}
+
+#map_container iframe{
+	box-shadow: 7px 7px 0px 0px rgba(164, 124, 76, 1);
 }
 
 img.footer_icon_map{
