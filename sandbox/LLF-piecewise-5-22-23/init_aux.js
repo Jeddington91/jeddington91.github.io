@@ -47,23 +47,6 @@
 		});
 	});
 
-	//Accordion initializers
-	const initializeAccordions = (container) => {
-		const accordions = container.querySelectorAll('.accordion');
-		accordions.forEach((accordionElement) => {
-			new Accordion(accordionElement);
-				const nestedAccordions = accordionElement.querySelectorAll('.accordion');
-				nestedAccordions.forEach((nestedAccordionElement) => {
-				initializeAccordions(nestedAccordionElement);
-				});
-			});
-	};
-	const mainAccordion = document.querySelector('.accordion');
-	initializeAccordions(mainAccordion);
-
-	const accordionElement = document.querySelector('.accordion');
-	const accordionInstance = new Accordion(accordionElement);
-
 	function loadGoogleMap() {
 		var mapContainer = document.getElementById('map_container');
 		var iframe = document.createElement('iframe');
@@ -84,10 +67,5 @@
 	
 	const headerTestimonialMobileSlider = new Slider('.slider_container.headerTestimonialMobile .slider', '.slider_container.headerTestimonialMobile .controls');
 	headerTestimonialMobileSlider.init();
-	
-//	const clientStoriesSlider = new MultiSlider('.slider_container.clientStories .slider', '.slider_container.clientStories .controls', 3, 2, 95); //Using slick temporarily
-
-	const ourResultsMobileSlider = new Slider('.slider_container.ourResultsMobile .slider', '.slider_container.ourResultsMobile .controls');
-	ourResultsMobileSlider.init();
 	
 

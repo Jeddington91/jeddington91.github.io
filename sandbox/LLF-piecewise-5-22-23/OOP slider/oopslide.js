@@ -77,7 +77,7 @@ class Slider {
    }
 
 
-//Using slick temporarily -Jeddington - multislider for multiple slides per page, priority medium
+//Using slick temporarily -Jeddington - multislider for multiple slides per page
 //class MultiSlider {
 //  constructor(sliderSelector, controlsSelector, visibleSlides, slideMargin, sliderWidth=100) {
 //    this.sliderElement = document.querySelector(sliderSelector);
@@ -179,8 +179,7 @@ class Slider {
 //		this.autoScroll();
 //     }
 //} 
-   // Create & Initialize new slider's here. (.slider_container.(*slider name by class (div parent of "slider")*) .slider, .slider_container.* .controls );
-   // Place each used on each page in script tag of each page.
+   
 
 //   const narrowSlider = new Slider('.slider_container.narrow .slider', '.slider_container.narrow .controls');
 //   narrowSlider.init();
